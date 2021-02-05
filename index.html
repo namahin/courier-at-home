@@ -28,6 +28,11 @@
     <meta property="og:description" content="">
     <meta property="og:site_name" content="Courier @ Home">
     <meta property="fb:admins" content="page id">
+    <!-- Google Font: 'Poppins' CDN -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap v5.0.0-beta1 CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -48,51 +53,202 @@
 <body>
     <!-- home page banner section start -->
     <section class="home-banner-sec">
-
+        <!-- navigation header -->
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarTrigger" aria-controls="navbarTrigger" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarTrigger">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Tracking</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Price Quotation</a></li>
+                                        <li><a class="dropdown-item" href="#">Pricing Information</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Coverage Map</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="tel:+88017XXXXXXXX"><i
+                                            class="fas fa-phone-alt"></i>017XXXXXXXX</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn-theme" href="#">Registration</a>
+                                </li>
+                                <li class="nav-item ms-3">
+                                    <a class="nav-link btn-theme active" href="#">Login</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </header>
+        <!-- navigation header end here -->
 
+        <div class="home-banner">
+            <div class="banner-content">
+                <h1>Have a Parcel? <span>Track Here!</span></h1>
+                <p>Delevery @ Home! Now you can track your <strong>parcel</strong> easily.</p>
+                <div class="tracker">
+                    <form action="tracking.html?Result">
+                        <p><i class="fas fa-thumbtack"></i><input type="text"
+                                placeholder="Enter your mobile/parcel number" required></p>
+                        <button type="submit">Track Parcel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- home page banner section end -->
 
+    <!-- service section start from here -->
+    <section class="service-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <div class="tittle">
+                            <h4>Packaging Services</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <div class="tittle">
+                            <h4>Warehouse</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-truck-loading"></i>
+                        </div>
+                        <div class="tittle">
+                            <h4>Fulfillment</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="tittle">
+                            <h4>Call Center</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-money-check"></i>
+                        </div>
+                        <div class="tittle">
+                            <h4>bKash on Delivery (BOD)</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-people-carry"></i>
+                        </div>
+                        <div class="tittle">
+                            <h4>Parcel Pick & Drop</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service section end -->
 
+    <!-- service counter section start from here -->
+    <section class="service-counter-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="counter-item text-center">
+                        <h3>6.5M+</h3>
+                        <h5>Parcels Delivered</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter-item text-center">
+                        <h3>64</h3>
+                        <h5>Districts Coverage</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter-item text-center">
+                        <h3>500+</h3>
+                        <h5>Delivery Agents</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter-item text-center">
+                        <h3>25k+</h3>
+                        <h5>Registered Merchants</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service counter section end -->
+
+    <!-- instant quote -->
+    <div class="instant-quote">
+        <div class="row">
+            <div class="col-md-8 col-sm-8">
+                <h2>Get an instant quote!</h2>
+                <p>Get a rate for your shipment with our easy-to-use quote tool</p>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <a class="btn-theme" href="#">Calculate Price</a>
+            </div>
+        </div>
+    </div>
+    <!-- instant quote end -->
+
+    <!-- feature section start -->
+    <section>
+        <div class="container">
+            <div class="sec-title">
+                <h2>Why Courier @ Home</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-7 col-ms-8">
+                    <div class="col-md-6 col-sm-6">
+
+                    </div>
+                </div>
+                <div class="col-md-5 col-ms-4">
+                    <img src="..." alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- feature section end -->
 
 
 
@@ -108,6 +264,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
+    <script src="assets/js/app.js"></script>
 
 </body>
 
