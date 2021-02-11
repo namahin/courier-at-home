@@ -19,6 +19,10 @@ a:hover {
     transition: linear .2s;
 }
 
+button:focus {
+    outline: none;
+}
+
 .btn-theme {
     color: #F94539 !important;
     background-color: #fff;
@@ -94,6 +98,7 @@ header nav {}
 .nav-link {
     color: #333;
     font-size: 16px;
+    padding-top: 14px;
 }
 
 .nav-link:hover {
@@ -376,3 +381,42 @@ header nav {}
 }
 
 .partner-content a {}
+
+.clients-item-set {}
+
+.clients-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 130px;
+    padding: 0 50px;
+}
+
+.clients-item img {
+    width: auto !important;
+    display: initial !important;
+    filter: grayscale(1);
+    opacity: .8;
+    transition: linear .2s;
+}
+
+.clients-item img:hover {
+    filter: none;
+    opacity: 1;
+    transition: linear .2s;
+}
+
+.clients-carousel .owl-dot span {
+    height: 14px !important;
+    width: 14px !important;
+    transition: linear .5s;
+}
+
+.clients-carousel .owl-dot.active span {
+    width: 45px !important;
+    background: #F94539 !important;
+    transition: linear .5s;
+}
+.clients-carousel .owl-dot, .clients-carousel .owl-dot.active{
+    transition: linear .5s;
+}
