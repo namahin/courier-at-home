@@ -69,6 +69,16 @@ button:focus {
 /* *************************************************** */
 /* home page css */
 /* *************************************************** */
+.navbar-toggler {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler i {
+    color: #d30e00;
+    font-size: 25px;
+}
+
 .home-banner-sec {
     height: 650px;
     background-image: url();
@@ -80,7 +90,7 @@ button:focus {
 header {
     background: #fff;
     box-shadow: 0px 0 8px #00000012;
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 1100;
 }
@@ -222,7 +232,7 @@ header nav {}
 }
 
 .service-sec {
-    margin-bottom: 150px;
+    margin-bottom: 80px;
 }
 
 .service-card {
@@ -233,7 +243,7 @@ header nav {}
     box-shadow: 0 0 65px 0px #0000000d;
     border-radius: 8px;
     position: relative;
-    top: 0%;
+    top: -50%;
     transition: linear .2s;
     display: block;
 }
@@ -258,7 +268,7 @@ header nav {}
     box-shadow: none;
     background-color: #28205E;
     color: #fff;
-    top: -25%;
+    top: -75%;
 }
 
 .service-counter-sec {
@@ -417,6 +427,174 @@ header nav {}
     background: #F94539 !important;
     transition: linear .5s;
 }
-.clients-carousel .owl-dot, .clients-carousel .owl-dot.active{
+
+.clients-carousel .owl-dot,
+.clients-carousel .owl-dot.active {
     transition: linear .5s;
+}
+
+.footer-sec {
+    position: relative;
+    padding: 150px 0 50px;
+    color: #fff;
+    background: #1B1E1A;
+}
+
+.footer-widget {}
+
+.footer-widget h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-widget ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    column-count: 2;
+}
+
+.footer-widget ul li {}
+
+.footer-widget ul li a {
+    font-size: 14px;
+    display: block;
+    padding: 8px 0;
+    color: #ffffff80;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.footer-widget ul li a:hover {
+    color: #fffffff2;
+}
+
+.footer-bottom {
+    border-bottom: 1px solid #ffffff40;
+    padding: 70px 0 50px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-logo {}
+
+.footer-contact {
+    margin: 0 5px;
+    /* display: inline-block; */
+    font-weight: 500;
+    font-size: 17px;
+    text-align: left;
+}
+
+.footer-contact span {}
+
+.footer-contact a {
+    color: #FFC641;
+}
+
+.footer-contact a:hover {
+    color: #d30e00;
+}
+
+.footer-social {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-social li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.footer-social li a {
+    background-color: #111311;
+    color: #ffffff73;
+    font-size: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social li a:hover {
+    color: #fff;
+    background-color: #0d0e0d;
+}
+
+.footer-social li a i {}
+
+.copyright {}
+
+.copyright p {
+    font-size: 14px;
+    color: #ffffff33;
+    margin: 0;
+    font-weight: 400;
+}
+
+.copyright p a {
+    color: #ffffff66;
+}
+
+.copyright p a:hover {
+    color: #ffffff80;
+
+}
+
+.copyright img {
+    display: none;
+}
+
+.blog-sec {}
+
+.blog-card {}
+
+.blog-card a {}
+
+.blog-card a img {
+    margin-bottom: 30px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blog-card a h2 {
+    color: #333333de;
+    font-size: 16px;
+    line-height: 24px;
+    min-height: 48px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -moz-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 0;
+    transition: linear .2s;
+}
+
+.blog-card:hover h2 {
+    color: #d30e00;
+    transition: linear .2s;
+}
+
+.blog-card a p {
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: .35px;
+    font-weight: 400;
+    color: #3a3a3a;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -moz-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    font-weight: 400;
+    margin-bottom: 50px;
 }
