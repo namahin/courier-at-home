@@ -244,7 +244,7 @@ header nav {}
     border-radius: 8px;
     position: relative;
     top: -50%;
-    transition: linear .2s;
+    transition: cubic-bezier(.46,.03,.52,.96) 0.5s;
     display: block;
 }
 
@@ -264,7 +264,7 @@ header nav {}
 
 
 .service-card:hover {
-    transition: linear .2s;
+    transition: cubic-bezier(.46,.03,.52,.96) 0.5s;
     box-shadow: none;
     background-color: #28205E;
     color: #fff;
