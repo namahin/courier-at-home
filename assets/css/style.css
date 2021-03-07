@@ -857,3 +857,113 @@ header nav {}
 .progress-bar-step p.active::after {
     color: #00C868;
 }
+
+/* blog page css */
+.blog-page {
+    background-color: #F1F3F4;
+}
+
+.blog-card-block {
+    position: relative;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 15px 65px 0px #0000000d;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: linear .3s;
+}
+
+.blog-card-block:hover {
+    box-shadow: 0 0px 0px 0px #0000000d;
+    transition: linear .3s;
+}
+
+.blog-card-block a {
+    padding-bottom: 30px;
+    display: block;
+}
+
+.blog-card-block a img {
+    width: 100%;
+}
+
+.blog-card-block a h2 {
+    margin: 0;
+    color: #F94539;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 15px 10px;
+}
+
+.blog-card-block a p {
+    line-height: 21px;
+    letter-spacing: .35px;
+    font-weight: 400;
+    color: #3a3a3a;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+}
+
+.blog-cat {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.blog-cat a {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    color: #fff;
+    background-color: #28205E;
+    padding: 10px 15px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0px 0 8px #00000012;
+}
+
+.blog-details {
+    position: relative;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 15px 65px 0px #0000000d;
+    margin: 50px 0;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+.blog-details img {
+    width: 100%;
+}
+
+.blog-details h2 {
+    margin: 0;
+    color: #F94539;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 25px 25px 5px;
+}
+
+.blog-details h3 a {}
+
+.blog-details h3 {
+    line-height: 21px;
+    letter-spacing: .35px;
+    font-weight: 400;
+    color: #3a3a3a;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 25px;
+}
+
+.blog-details p {
+    padding: 0 25px;
+}
