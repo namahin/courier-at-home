@@ -112,6 +112,17 @@ button:focus {
 /* *************************************************** */
 /* home page css */
 /* *************************************************** */
+.navbar-brand {
+    max-width: 150px;
+    padding: 0;
+}
+
+.navbar-brand ‍a {}
+
+.navbar-brand ‍a img {
+    width: 100%;
+}
+
 .navbar-toggler {
     outline: none !important;
     box-shadow: none !important;
