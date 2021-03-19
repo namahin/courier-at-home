@@ -74,6 +74,9 @@
       background-position: center;
       background-repeat: no-repeat;
     }
+    .payment{
+      display: none;
+    }
   </style>
 
 </head>
@@ -163,28 +166,28 @@
               <input name="photo" id="fileInput" accept="image/*" class="hidden" type="file" @change="let file = document.getElementById('fileInput').files[0]; 
 								var reader = new FileReader();
 								reader.onload = (e) => image = e.target.result;
-								reader.readAsDataURL(file);" required>
+								reader.readAsDataURL(file);">
             </div>
 
             <div class="mb-5">
               <label for="name" class="font-bold mb-1 text-gray-700 block">Name</label>
               <input type="text" id="name"
                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                placeholder="Enter your name..." required>
+                placeholder="Enter your name...">
             </div>
 
             <div class="mb-5">
               <label for="email" class="font-bold mb-1 text-gray-700 block">Email</label>
               <input type="email" id="email"
                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                placeholder="Enter your email address..." required>
+                placeholder="Enter your email address...">
             </div>
 
             <div class="mb-5">
               <label for="mobile" class="font-bold mb-1 text-gray-700 block">Mobile</label>
               <input type="number" id="mobile"
                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                placeholder="Enter your email address..." required>
+                placeholder="Enter your email address...">
             </div>
 
             <div class="mb-10 pb-10">
@@ -204,7 +207,7 @@
                 <input :type="togglePassword ? 'text' : 'password'" @keydown="checkPasswordStrength()"
                   x-model="password" id="password"
                   class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                  placeholder="Your strong password..." required>
+                  placeholder="Your strong password...">
 
                 <div class="absolute right-0 bottom-0 top-0 px-3 py-3 cursor-pointer"
                   @click="togglePassword = !togglePassword">
@@ -248,21 +251,21 @@
               <label for="company" class="font-bold mb-1 text-gray-700 block">Company</label>
               <input type="text" id="company"
                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                placeholder="Enter your company name..." required>
+                placeholder="Enter your company name...">
             </div>
 
             <div class="mb-5">
               <label for="url" class="font-bold mb-1 text-gray-700 block">Website / Facebook page url</label>
               <input type="url" id="url"
                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                placeholder="Enter Website / Facebook page url..." required>
+                placeholder="Enter Website / Facebook page url...">
             </div>
 
             <div class="mb-5">
               <label for="city" class="font-bold mb-1 text-gray-700 block">City</label>
               <select name="" id="city"
                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                required>
+               >
                 <option value="">Find city names here</option>
                 <option value="dhaka">Dhaka</option>
               </select>
@@ -272,7 +275,7 @@
               <label for="zone" class="font-bold mb-1 text-gray-700 block">Zone</label>
               <select name="" id="zone"
                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                required>
+               >
                 <option value="">Find zone names here</option>
                 <option value="dhaka">Dhaka Mettro Zone</option>
               </select>
@@ -282,7 +285,7 @@
               <label for="address" class="font-bold mb-1 text-gray-700 block">Address</label>
               <input type="text" id="address"
                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                placeholder="Enter your address..." required>
+                placeholder="Enter your address...">
             </div>
           </div>
           <!-- user Info step end -->
@@ -291,73 +294,77 @@
           <div x-show.transition.in="step === 3">
 
             <div class="mb-5">
-              <label for="payment" class="font-bold mb-1 text-gray-700 block">Payment Method</label>
-              <select name="" id="payment"
+              <label for="paymentselector" class="font-bold mb-1 text-gray-700 block">Payment Method</label>
+              <select name="" id="paymentselector"
                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                required>
-                <option value="">Select your payment method</option>
+               >
+                <option>Select your payment method</option>
                 <option value="bank">Bank</option>
                 <option value="bkash">bKash</option>
               </select>
             </div>
 
-            <div class="mb-5">
-              <label for="bank" class="font-bold mb-1 text-gray-700 block">Select Bank</label>
-              <select name="" id="bank"
-                class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                required>
-                <option value="">Select your bank</option>
-                <option value="brac">BRAC</option>
-                <option value="dbbl">DBBL</option>
-              </select>
-            </div>
+            <div id="bank" class="payment">
+              <div class="mb-5">
+                <label for="bank" class="font-bold mb-1 text-gray-700 block">Select Bank</label>
+                <select name="" id="bank"
+                  class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+                 >
+                  <option value="">Select your bank</option>
+                  <option value="brac">BRAC</option>
+                  <option value="dbbl">DBBL</option>
+                </select>
+              </div>
 
-            <div class="mb-5">
-              <label for="bah" class="font-bold mb-1 text-gray-700 block">Bank Account Holder</label>
-              <input type="text" id="bah"
-                class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                placeholder="Ex." required>
-            </div>
+              <div class="mb-5">
+                <label for="bah" class="font-bold mb-1 text-gray-700 block">Bank Account Holder</label>
+                <input type="text" id="bah"
+                  class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+                  placeholder="Ex.">
+              </div>
 
-            <div class="mb-5">
-              <label for="ban" class="font-bold mb-1 text-gray-700 block">Bank Account No</label>
-              <input type="text" id="ban"
-                class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                placeholder="Ex." required>
-            </div>
+              <div class="mb-5">
+                <label for="ban" class="font-bold mb-1 text-gray-700 block">Bank Account No</label>
+                <input type="text" id="ban"
+                  class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+                  placeholder="Ex.">
+              </div>
 
-            <div class="mb-5">
-              <label for="bn" class="font-bold mb-1 text-gray-700 block">Branch Name</label>
-              <input type="text" id="bn"
-                class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                placeholder="Ex." required>
-            </div>
+              <div class="mb-5">
+                <label for="bn" class="font-bold mb-1 text-gray-700 block">Branch Name</label>
+                <input type="text" id="bn"
+                  class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+                  placeholder="Ex.">
+              </div>
 
-            <div class="mb-5">
-              <label for="rn" class="font-bold mb-1 text-gray-700 block">Routing No</label>
-              <input type="text" id="rn"
-                class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                placeholder="Ex." required>
+              <div class="mb-5">
+                <label for="rn" class="font-bold mb-1 text-gray-700 block">Routing No</label>
+                <input type="text" id="rn"
+                  class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+                  placeholder="Ex.">
+              </div>
             </div>
 
 
             <!-- if payment method is bkash -->
-            <div class="mb-5">
-              <label for="bkashat" class="font-bold mb-1 text-gray-700 block">Bkash Account Type</label>
-              <select name="bkashat" id="bkashat"
-                class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                required>
-                <option value="">Select account type</option>
-                <option value="agent">Agent</option>
-                <option value="personal">Personal</option>
-              </select>
-            </div>
+            <div id="bkash" class="payment">
+              <div class="mb-5">
+                <label for="bkashat" class="font-bold mb-1 text-gray-700 block">Bkash Account Type</label>
+                <select name="bkashat" id="bkashat"
+                  class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+                 >
+                  <option value="">Select account type</option>
+                  <option value="agent">Agent</option>
+                  <option value="personal">Personal</option>
+                </select>
+              </div>
 
-            <div class="mb-5">
-              <label for="bnum" class="font-bold mb-1 text-gray-700 block">Bkash Number</label>
-              <input type="text" id="bnum"
-                class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                placeholder="Enter bkash account number..." required>
+              <div class="mb-5">
+                <label for="bnum" class="font-bold mb-1 text-gray-700 block">Bkash Number</label>
+                <input type="text" id="bnum"
+                  class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+                  placeholder="Enter bkash account number...">
+              </div>
             </div>
             <!-- if payment method is bkash end -->
 
@@ -438,6 +445,16 @@
         }
       }
     }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      $('#paymentselector').change(function () {
+        $('.payment').hide();
+        $('#' + $(this).val()).show();
+      });
+    });
   </script>
 </body>
 
