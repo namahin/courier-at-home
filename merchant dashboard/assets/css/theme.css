@@ -13,3 +13,7 @@
     line-height: 2 !important;
     padding: 7px 18px !important;
 }
+
+.card-profile .card-avatar {
+    box-shadow: 0 4px 20px 0 #00000024, 0 7px 10px -5px #52525266;
+}
