@@ -9,21 +9,21 @@
 /* common css */
 /* *************************************************** */
 *::-moz-selection {
-    background: #F94539;
+    background: #ed4c21;
     color: #fff;
     text-shadow: none;
 }
 
 ::-moz-selection {
     color: #fff;
-    background: #F94539;
+    background: #ed4c21;
     text-shadow: none;
 }
 
 ::selection {
     text-shadow: none;
     color: #FFF;
-    background: #F94539;
+    background: #ed4c21;
 }
 
 h1,
@@ -52,13 +52,13 @@ button:focus {
 }
 
 a {
-    color: #28205E;
+    color: #102332;
     transition: linear .2s;
 }
 
 a:hover {
     text-decoration: none;
-    color: #F94539;
+    color: #ed4c21;
     transition: linear .2s;
 }
 
@@ -67,7 +67,7 @@ button:focus {
 }
 
 .btn-theme {
-    color: #F94539 !important;
+    color: #ed4c21 !important;
     background-color: #fff;
     border: 1px solid;
     box-sizing: border-box;
@@ -78,9 +78,9 @@ button:focus {
 
 .btn-theme.active,
 .btn-theme:hover {
-    background-color: #F94539;
+    background-color: #ed4c21;
     color: #fff !important;
-    border-color: #F94539;
+    border-color: #ed4c21;
 }
 
 .btn-theme.active:hover {
@@ -167,7 +167,7 @@ header nav {}
 }
 
 .nav-link:hover {
-    color: #F94539;
+    color: #ed4c21;
 }
 
 .nav-link i {
@@ -216,7 +216,7 @@ header nav {}
 }
 
 .home-banner .banner-content h1 span {
-    color: #F94539;
+    color: #ed4c21;
 }
 
 .home-banner .banner-content p {
@@ -271,18 +271,18 @@ header nav {}
     top: -1px;
     bottom: -1px;
     width: 150px;
-    background-color: #F94539;
+    background-color: #ed4c21;
     border: none;
     color: #fff;
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 0 4px 4px 0;
-    outline: #F94539;
+    outline: #ed4c21;
     transition: linear .2s;
 }
 
 .tracker form button:hover {
-    background-color: #28205E;
+    background-color: #102332;
     transition: linear .2s;
 }
 
@@ -291,7 +291,7 @@ header nav {}
 }
 
 .service-card {
-    color: #F94539;
+    color: #ed4c21;
     text-align: center;
     padding: 20px 15px;
     background: #fff;
@@ -321,7 +321,7 @@ header nav {}
 .service-card:hover {
     transition: cubic-bezier(.46, .03, .52, .96) 0.5s;
     box-shadow: none;
-    background-color: #28205E;
+    background-color: #102332;
     color: #fff;
     top: -75%;
 }
@@ -339,7 +339,7 @@ header nav {}
     font-size: 48px;
     font-weight: 700;
     line-height: 1;
-    color: #F94539;
+    color: #ed4c21;
     letter-spacing: 1.5px;
     margin-bottom: 8px;
 }
@@ -354,8 +354,8 @@ header nav {}
 .instant-quote {
     max-width: 920px;
     margin: auto;
-    background-color: #28205E;
-    box-shadow: 0 5px 15px 0px #f945390d;
+    background-color: #102332;
+    box-shadow: 0 5px 15px 0px #ed4c210d;
     border-radius: 15px;
     padding: 40px 30px;
     position: relative;
@@ -408,7 +408,7 @@ header nav {}
 }
 
 .feature-content h4 {
-    color: #F94539;
+    color: #ed4c21;
     font-size: 20px;
     font-weight: 600;
 }
@@ -479,7 +479,7 @@ header nav {}
 
 .clients-carousel .owl-dot.active span {
     width: 45px !important;
-    background: #F94539 !important;
+    background: #ed4c21 !important;
     transition: linear .5s;
 }
 
@@ -711,7 +711,7 @@ header nav {}
 }
 
 .inner-short-text p a {
-    color: #F94539;
+    color: #ed4c21;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 16px;
@@ -765,7 +765,7 @@ header nav {}
     content: '';
     width: 10px;
     height: 10px;
-    background: #F94539;
+    background: #ed4c21;
     border-radius: 50%;
     display: inline-block;
     vertical-align: middle;
@@ -785,12 +785,12 @@ header nav {}
 .progress-bar-step p {
     position: relative;
     background-color: #fff;
-    border: 2px solid #F94539;
+    border: 2px solid #ed4c21;
     height: 72px;
     width: 72px;
     margin: auto;
     border-radius: 50%;
-    color: #F94539;
+    color: #ed4c21;
     font-size: 22px;
     margin-bottom: 25px;
 }
@@ -836,7 +836,7 @@ header nav {}
     line-height: 0px;
     position: absolute;
     height: 27px;
-    color: #F94539;
+    color: #ed4c21;
     letter-spacing: 15px;
     top: 20px;
     left: -10px;
@@ -854,7 +854,7 @@ header nav {}
     line-height: 0px;
     position: absolute;
     height: 26px;
-    color: #F94539;
+    color: #ed4c21;
     letter-spacing: 13px;
     top: 20px;
     right: -10px;
@@ -901,7 +901,7 @@ header nav {}
 
 .blog-card-block a h2 {
     margin: 0;
-    color: #F94539;
+    color: #ed4c21;
     font-size: 20px;
     font-weight: 600;
     padding: 15px 15px 10px;
@@ -935,7 +935,7 @@ header nav {}
     line-height: 1;
     letter-spacing: 0.5px;
     color: #fff;
-    background-color: #28205E;
+    background-color: #102332;
     padding: 10px 15px;
     border-radius: 15px;
     display: inline-block;
@@ -958,7 +958,7 @@ header nav {}
 
 .blog-details h2 {
     margin: 0;
-    color: #F94539;
+    color: #ed4c21;
     font-size: 22px;
     font-weight: 600;
     padding: 25px 25px 5px;
