@@ -74,10 +74,19 @@ button:focus {
     border-radius: 5px;
     padding: 12px 30px !important;
     display: inline-block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
-
-.btn-theme.active,
+.btn-theme span{
+    position: relative;
+    z-index: 1;
+}
 .btn-theme:hover {
+    color: #fff !important;
+    border-color: #ed4c21;
+}
+.btn-theme.active {
     background-color: #ed4c21;
     color: #fff !important;
     border-color: #ed4c21;
@@ -87,7 +96,23 @@ button:focus {
     background-color: #d30e00;
     border-color: #d30e00;
 }
-
+.btn-theme::before{
+    content: '';
+    position: absolute;
+    background-color: #ed4c21;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    transition: linear .3s;
+    border-radius: 4px;
+}
+.btn-theme:hover::before{
+    width: 100%;
+    left: 0;
+    right: auto;
+    transition: linear .3s;
+}
 .sec-title {
     margin-bottom: 60px;
 }
