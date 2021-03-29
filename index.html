@@ -33,6 +33,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css">
     <!-- Bootstrap v5.0.0-beta1 CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- UIkit v3.6.15 CSS CDN -->
@@ -44,6 +46,7 @@
     <!-- Owl Carousel v2.3.4 CSS -->
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+
     <!-- Theme CSS -->
     <link rel="stylesheet" media="all" href="assets/css/style.css">
     <link rel="stylesheet" media="all" href="assets/css/responsive.css">
@@ -59,7 +62,8 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html"><img src="assets/media/images/logo.png" alt="Courier @ Home"></a>
+                        <a class="navbar-brand" href="index.html"><img src="assets/media/images/logo.png"
+                                alt="Courier @ Home"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarTrigger" aria-controls="navbarTrigger" aria-expanded="false"
                             aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
@@ -72,12 +76,50 @@
                                     <a class="nav-link" aria-current="page" href="tracking.html">Tracking</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">Price Quotation</a></li>
-                                        <li><a class="dropdown-item" href="#">Pricing Information</a></li>
-                                    </ul>
+                                    <div class="uk-inline">
+                                        <a href="#" class="nav-link dropdown-toggle">Services</a>
+                                        <div class="services-dropdown" uk-dropdown="pos: bottom-center;">
+                                            <ul class="services-item">
+                                                <li><a href="#">
+                                                        <img src="assets/media/images/icon.svg" alt="">
+                                                        <p>Services Item</p>
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <img src="assets/media/images/icon.svg" alt="">
+                                                        <p>Services Item</p>
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <img src="assets/media/images/icon.svg" alt="">
+                                                        <p>Services Item</p>
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <img src="assets/media/images/icon.svg" alt="">
+                                                        <p>Services Item</p>
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <img src="assets/media/images/icon.svg" alt="">
+                                                        <p>Services Item</p>
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <img src="assets/media/images/icon.svg" alt="">
+                                                        <p>Services Item</p>
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <img src="assets/media/images/icon.svg" alt="">
+                                                        <p>Services Item</p>
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <img src="assets/media/images/icon.svg" alt="">
+                                                        <p>Services Item</p>
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <img src="assets/media/images/icon.svg" alt="">
+                                                        <p>Services Item</p>
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="coverage-map.html">Coverage Map</a>
@@ -103,7 +145,13 @@
 
         <div class="home-banner">
             <div class="banner-content">
-                <h1>Have a Parcel? <span>Track Here!</span></h1>
+                <h1>Have a Parcel? <span>Track <span class="animate-typing" data-animate-loop="true" data-type-speed="200"
+                        data-type-delay="100" data-remove-speed="30" data-remove-delay="900" data-cursor-speed="900">
+                        Here!|
+                        Now!|
+                        Parcel!|
+                        Order!|
+                    </span></span></h1>
                 <p>Delevery @ Home! Now you can track your <strong>parcel</strong> easily.</p>
                 <div class="tracker">
                     <form action="tracking-result.html#tracking-result">
@@ -116,175 +164,179 @@
         </div>
     </section>
     <!-- home page banner section end -->
-
-    <!-- service section start from here -->
-    <section class="service-sec">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-sm-4 col-6">
-                    <a href="#" class="service-card">
-                        <div class="icon">
-                            <i class="fas fa-box-open"></i>
-                        </div>
-                        <div class="title">Packaging</div>
-                    </a>
-                </div>
-                <div class="col-md-2 col-sm-4 col-6">
-                    <a href="#" class="service-card">
-                        <div class="icon">
-                            <i class="fas fa-warehouse"></i>
-                        </div>
-                        <div class="title">Warehouse</div>
-                    </a>
-                </div>
-                <div class="col-md-2 col-sm-4 col-6">
-                    <a href="#" class="service-card">
-                        <div class="icon">
-                            <i class="fas fa-truck-loading"></i>
-                        </div>
-                        <div class="title">Fulfillment</div>
-                    </a>
-                </div>
-                <div class="col-md-2 col-sm-4 col-6">
-                    <a href="#" class="service-card">
-                        <div class="icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <div class="title">Call Center</div>
-                    </a>
-                </div>
-                <div class="col-md-2 col-sm-4 col-6">
-                    <a href="#" class="service-card">
-                        <div class="icon">
-                            <i class="fas fa-money-check"></i>
-                        </div>
-                        <div class="title">BOD</div>
-                    </a>
-                </div>
-                <div class="col-md-2 col-sm-4 col-6">
-                    <a href="#" class="service-card">
-                        <div class="icon">
-                            <i class="fas fa-people-carry"></i>
-                        </div>
-                        <div class="title">Pick & Drop</div>
-                    </a>
+    <section class="parallax-bgi-1">
+        <!-- service section start from here -->
+        <div class="service-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-4 col-6 wow fadeInUp" data-wow-delay=".1s">
+                        <a href="#" class="service-card">
+                            <div class="icon">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                            <div class="title">Packaging</div>
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6 wow fadeInUp" data-wow-delay=".2s">
+                        <a href="#" class="service-card">
+                            <div class="icon">
+                                <i class="fas fa-warehouse"></i>
+                            </div>
+                            <div class="title">Warehouse</div>
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6 wow fadeInUp" data-wow-delay=".3s">
+                        <a href="#" class="service-card">
+                            <div class="icon">
+                                <i class="fas fa-truck-loading"></i>
+                            </div>
+                            <div class="title">Fulfillment</div>
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6 wow fadeInUp" data-wow-delay=".4s">
+                        <a href="#" class="service-card">
+                            <div class="icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="title">Call Center</div>
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6 wow fadeInUp" data-wow-delay=".5s">
+                        <a href="#" class="service-card">
+                            <div class="icon">
+                                <i class="fas fa-money-check"></i>
+                            </div>
+                            <div class="title">BOD</div>
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6 wow fadeInUp" data-wow-delay=".6s">
+                        <a href="#" class="service-card">
+                            <div class="icon">
+                                <i class="fas fa-people-carry"></i>
+                            </div>
+                            <div class="title">Pick & Drop</div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- service section end -->
+        <!-- instant quote -->
+        <div class="instant-quote wow fadeInUp">
+            <div class="row m-0 align-items-center">
+                <div class="col-md-8 col-sm-8">
+                    <h2>Get an instant quote!</h2>
+                    <p>Get a rate for your shipment with our easy-to-use quote tool</p>
+                </div>
+                <div class="col-md-4 col-sm-4 text-end">
+                    <a class="btn-theme active" href="#">Calculate Price</a>
+                </div>
+            </div>
+        </div>
+        <!-- instant quote end -->
+
+        <!-- feature section start -->
+        <div class="feature-sec">
+            <div class="container">
+                <div class="sec-title text-center wow fadeInUp">
+                    <h2>Why Courier @ Home</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="feature-item wow fadeInUp" data-wow-delay=".1s">
+                            <img src="assets/media/images/icon_solution.svg" alt="One Stop Solution">
+                            <div class="feature-content">
+                                <h4>One Stop Solution</h4>
+                                <p>We understand how to make logistics work for our merchant partners. Our job is to let
+                                    our
+                                    partners focus on their core business while we take care of the rest.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="feature-item wow fadeInUp" data-wow-delay=".2s">
+                            <img src="assets/media/images/icon_wide_cover.svg" alt="Wide Coverage">
+                            <div class="feature-content">
+                                <h4>Wide Coverage</h4>
+                                <p>We have a dedicated delivery channel of 350+ delivery agents in Dhaka and Chattogram.
+                                    We
+                                    have partnered with 50+ franchises all over the country as well.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="feature-item wow fadeInUp" data-wow-delay=".3s">
+                            <img src="assets/media/images/icon_track.svg" alt="Full Tracking">
+                            <div class="feature-content">
+                                <h4>Full Tracking</h4>
+                                <p>Merchants have full access of tracking every step of the delivery. We provide end to
+                                    end
+                                    real time tracking facilities through email, sms and QR code.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="feature-item wow fadeInUp" data-wow-delay=".4s">
+                            <img src="assets/media/images/icon_delivey.svg" alt="Delivery confirmation with OTP">
+                            <div class="feature-content">
+                                <h4>Delivery confirmation with OTP</h4>
+                                <p>Two factor authentications - OTP verification is implemented at the time of delivery
+                                    to
+                                    ensure an additional layer of security to the delivered package.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="feature-item wow fadeInUp" data-wow-delay=".5s">
+                            <img src="assets/media/images/icon_truck_fast.svg" alt="Fastest Service">
+                            <div class="feature-content">
+                                <h4>Fastest Service</h4>
+                                <p>Our team works round the clock to ensure fastest delivery and minimize cancellation
+                                    ratio
+                                    so that we, as a business partner, can ensure our customer’s growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="feature-item wow fadeInUp" data-wow-delay=".6s">
+                            <img src="assets/media/images/icon_cash-hand.svg" alt="Cash on Delivery (COD)">
+                            <div class="feature-content">
+                                <h4>Cash on Delivery (COD)</h4>
+                                <p>We collect cash from your customer and transfer it to you on time through a formal
+                                    banking channel, and of course with all the detailed supporting information.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- feature section end -->
     </section>
-    <!-- service section end -->
-
-    <!-- instant quote -->
-    <div class="instant-quote">
-        <div class="row m-0 align-items-center">
-            <div class="col-md-8 col-sm-8">
-                <h2>Get an instant quote!</h2>
-                <p>Get a rate for your shipment with our easy-to-use quote tool</p>
-            </div>
-            <div class="col-md-4 col-sm-4 text-end">
-                <a class="btn-theme active" href="#">Calculate Price</a>
-            </div>
-        </div>
-    </div>
-    <!-- instant quote end -->
-
-    <!-- feature section start -->
-    <section class="feature-sec">
-        <div class="container">
-            <div class="sec-title text-center">
-                <h2>Why Courier @ Home</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-item">
-                        <img src="assets/media/images/icon_solution.svg" alt="One Stop Solution">
-                        <div class="feature-content">
-                            <h4>One Stop Solution</h4>
-                            <p>We understand how to make logistics work for our merchant partners. Our job is to let our
-                                partners focus on their core business while we take care of the rest.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-item">
-                        <img src="assets/media/images/icon_wide_cover.svg" alt="Wide Coverage">
-                        <div class="feature-content">
-                            <h4>Wide Coverage</h4>
-                            <p>We have a dedicated delivery channel of 350+ delivery agents in Dhaka and Chattogram. We
-                                have partnered with 50+ franchises all over the country as well.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-item">
-                        <img src="assets/media/images/icon_track.svg" alt="Full Tracking">
-                        <div class="feature-content">
-                            <h4>Full Tracking</h4>
-                            <p>Merchants have full access of tracking every step of the delivery. We provide end to end
-                                real time tracking facilities through email, sms and QR code.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-item">
-                        <img src="assets/media/images/icon_delivey.svg" alt="Delivery confirmation with OTP">
-                        <div class="feature-content">
-                            <h4>Delivery confirmation with OTP</h4>
-                            <p>Two factor authentications - OTP verification is implemented at the time of delivery to
-                                ensure an additional layer of security to the delivered package.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-item">
-                        <img src="assets/media/images/icon_truck_fast.svg" alt="Fastest Service">
-                        <div class="feature-content">
-                            <h4>Fastest Service</h4>
-                            <p>Our team works round the clock to ensure fastest delivery and minimize cancellation ratio
-                                so that we, as a business partner, can ensure our customer’s growth.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-item">
-                        <img src="assets/media/images/icon_cash-hand.svg" alt="Cash on Delivery (COD)">
-                        <div class="feature-content">
-                            <h4>Cash on Delivery (COD)</h4>
-                            <p>We collect cash from your customer and transfer it to you on time through a formal
-                                banking channel, and of course with all the detailed supporting information.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- feature section end -->
-
     <!-- service counter section start from here -->
-    <section class="service-counter-sec">
+    <section class="service-counter-sec" id="counter">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     <div class="counter-item text-center">
-                        <h3>6.5M+</h3>
+                        <h3><span class="count" data-count="24">0</span>M+</h3>
                         <h5>Parcels Delivered</h5>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="counter-item text-center">
-                        <h3>64</h3>
+                        <h3><span class="count" data-count="64">0</span></h3>
                         <h5>Districts Coverage</h5>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="counter-item text-center">
-                        <h3>500+</h3>
+                        <h3><span class="count" data-count="500">0</span>+</h3>
                         <h5>Delivery Agents</h5>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="counter-item text-center">
-                        <h3>25k+</h3>
+                        <h3><span class="count" data-count="25">0</span>K+</h3>
                         <h5>Registered Merchants</h5>
                     </div>
                 </div>
@@ -606,8 +658,10 @@
     <!-- footer section end here -->
     <!-- Script -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.animateTyping.min.js"></script>
     <script src="assets/js/app.js"></script>
 
 </body>
