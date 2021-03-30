@@ -93,17 +93,22 @@
 
     .mobile-menu-alt {
         display: block;
+        position: relative;
     }
 
     .services-dropdown {
         position: relative;
         padding: 0;
         box-shadow: none;
+        left: 0 !important;
+        right: 0 !important;
     }
-    .services-item{
+
+    .services-item {
         height: 200px;
         overflow-y: auto;
     }
+
     .services-item li {
         width: 100%;
     }
@@ -121,6 +126,10 @@
 
     .services-item li a img {
         display: none;
+    }
+
+    header {
+        height: auto;
     }
 
 }
@@ -144,8 +153,6 @@
 
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-    .tracker {}
-
     .tracker form {
         display: block;
     }
@@ -153,8 +160,6 @@
     .tracker form p {
         padding: 0;
     }
-
-    .tracker form p input {}
 
     .tracker form button {
         position: relative;

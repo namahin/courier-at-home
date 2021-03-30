@@ -8,6 +8,12 @@
 /* *************************************************** */
 /* common css */
 /* *************************************************** */
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 *::-moz-selection {
     background: #ed4c21;
     color: #fff;
@@ -78,14 +84,17 @@ button:focus {
     position: relative;
     overflow: hidden;
 }
-.btn-theme span{
+
+.btn-theme span {
     position: relative;
     z-index: 1;
 }
+
 .btn-theme:hover {
     color: #fff !important;
     border-color: #ed4c21;
 }
+
 .btn-theme.active {
     background-color: #ed4c21;
     color: #fff !important;
@@ -94,9 +103,10 @@ button:focus {
 
 .btn-theme.active:hover {
     background-color: #d30e00;
-    border-color: #d30e00;
+    border-color: #F75028;
 }
-.btn-theme::before{
+
+.btn-theme::before {
     content: '';
     position: absolute;
     background-color: #ed4c21;
@@ -107,12 +117,14 @@ button:focus {
     transition: linear .3s;
     border-radius: 4px;
 }
-.btn-theme:hover::before{
+
+.btn-theme:hover::before {
     width: 100%;
     left: 0;
     right: auto;
     transition: linear .3s;
 }
+
 .sec-title {
     margin-bottom: 60px;
 }
@@ -143,8 +155,6 @@ button:focus {
     padding: 0;
 }
 
-.navbar-brand ‍a {}
-
 .navbar-brand ‍a img {
     width: 100%;
 }
@@ -173,9 +183,8 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1100;
+    height: 67px;
 }
-
-header nav {}
 
 .nav-item {
     margin-left: 30px;
@@ -249,8 +258,6 @@ header nav {}
     color: #fff;
     letter-spacing: 2px;
 }
-
-.home-banner .banner-content p strong {}
 
 .tracker {
     background: #fff;
@@ -333,8 +340,6 @@ header nav {}
 
 }
 
-.service-card .icon i {}
-
 .service-card .title {
     margin-bottom: 5px;
     font-size: 16px;
@@ -410,8 +415,6 @@ header nav {}
     color: #fff;
 }
 
-.instant-quote a {}
-
 .feature-sec {
     margin-top: 150px;
     padding-bottom: 100px;
@@ -449,10 +452,6 @@ header nav {}
     margin: 0;
 }
 
-.partner-sec {}
-
-.partner-content {}
-
 .partner-content h3 {
     letter-spacing: .35px;
     color: #3a3a3a;
@@ -472,9 +471,6 @@ header nav {}
     margin-bottom: 30px;
 }
 
-.partner-content a {}
-
-.clients-item-set {}
 
 .clients-item {
     display: flex;
@@ -522,7 +518,6 @@ header nav {}
     background: #1B1E1A;
 }
 
-.footer-widget {}
 
 .footer-widget h4 {
     font-size: 16px;
@@ -538,7 +533,6 @@ header nav {}
     column-count: 2;
 }
 
-.footer-widget ul li {}
 
 .footer-widget ul li a {
     font-size: 14px;
@@ -560,7 +554,6 @@ header nav {}
     text-align: center;
 }
 
-.footer-logo {}
 
 .footer-contact {
     margin: 0 5px;
@@ -570,7 +563,6 @@ header nav {}
     text-align: left;
 }
 
-.footer-contact span {}
 
 .footer-contact a {
     color: #FFC641;
@@ -609,10 +601,6 @@ header nav {}
     background-color: #0d0e0d;
 }
 
-.footer-social li a i {}
-
-.copyright {}
-
 .copyright p {
     font-size: 14px;
     color: #ffffff33;
@@ -633,11 +621,6 @@ header nav {}
     display: none;
 }
 
-.blog-sec {}
-
-.blog-card {}
-
-.blog-card a {}
 
 .blog-card a img {
     margin-bottom: 30px;
@@ -684,8 +667,6 @@ header nav {}
 /* ****************************************** */
 /* tracking-page */
 /* ****************************************** */
-.tracking-page {}
-
 .tracking-page .home-banner .banner-content {
     position: relative;
     top: auto;
@@ -711,8 +692,6 @@ header nav {}
 .tracking-page .home-banner .banner-content p {
     color: #3a3a3a;
 }
-
-.inner-short-text {}
 
 .inner-short-text .title {
     font-size: 24px;
@@ -763,8 +742,6 @@ header nav {}
     margin-bottom: 80px;
 }
 
-.all-location {}
-
 .all-location h3 {
     font-size: 22px;
     font-weight: 600;
@@ -800,10 +777,6 @@ header nav {}
 }
 
 /* tracking-result page */
-.step-progress-area {}
-
-.step-progress-bar {}
-
 .progress-bar-step {
     text-align: center;
     position: relative;
@@ -991,8 +964,6 @@ header nav {}
     padding: 25px 25px 5px;
 }
 
-.blog-details h3 a {}
-
 .blog-details h3 {
     line-height: 21px;
     letter-spacing: .35px;
@@ -1045,10 +1016,54 @@ header nav {}
 
 }
 
-.parallax-bgi-1{
+.parallax-bgi-1 {
     background-image: url(../media/images/parallax-bgi-1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+}
+
+/* single-page css */
+.single-page-banner {
+    background-image: url(../media/images/single-page-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 520px;
+    position: relative;
+}
+
+.single-page-banner::before {
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 50%;
+    background-color: #00000036;
+    position: absolute;
+}
+
+.single-page-banner .container {
+    position: relative;
+    height: 100%;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 100%;
+    padding-top: 70px;
+}
+
+.banner-content h1 {
+    padding: 0 15px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 40px;
+    display: inline-block;
+    line-height: 60px;
+    text-shadow: 0 5px 4px #00000036;
 }
