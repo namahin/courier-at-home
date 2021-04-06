@@ -390,14 +390,6 @@ header {
     box-shadow: 0 5px 15px 0px #ed4c210d;
     border-radius: 15px;
     padding: 40px 30px;
-    position: relative;
-    top: 0;
-    transition: linear .2s;
-}
-
-.instant-quote:hover {
-    top: 15px;
-    transition: linear .2s;
 }
 
 .instant-quote h2 {
@@ -1022,6 +1014,7 @@ header {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    padding-top: 60px;
 }
 
 /* single-page css */
@@ -1066,4 +1059,45 @@ header {
     display: inline-block;
     line-height: 60px;
     text-shadow: 0 5px 4px #00000036;
+}
+
+
+
+/* services */
+
+
+.services-main-block-3 {
+	padding: 100px 0;
+}
+
+.single-service-item {
+	box-shadow: 0 3px 9px -2px #d0cece;
+	margin-bottom: 20px;
+	text-align: center;
+	padding: 25px;
+	height: 250px;
+	position: relative;
+	z-index: 1;
+	border-radius: 0;
+	overflow: hidden;
+	background: #ffff;
+}
+
+.service-icon i:before {
+	font-size: 50px;
+	font-weight: 400;
+	color: #DFB163;
+}
+
+.single-service-item h4 {
+	font-weight: 500;
+	margin: 15px 0;
+}
+
+.service-section {
+	border-bottom: 1px solid #eee;
+}
+
+#service-detail .services-block-2 {
+	margin-bottom: 50px;
 }
