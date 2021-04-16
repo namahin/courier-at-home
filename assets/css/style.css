@@ -1102,19 +1102,38 @@ header {
     margin-bottom: 50px;
 }
 
-.delevery-cost-form {padding: 35px;border: 1px solid #c5c5c5;}
+.delevery-cost-form {
+    padding: 35px;
+    border: 1px solid #ddd;
+}
 
-.delevery-cost-form h3 {font-size: 20px;font-weight: 500;line-height: 32px;margin-bottom: 15px;}
+.delevery-cost-form h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 15px;
+}
 
 .delevery-cost-form form {}
 
 .delevery-cost-form form p {}
-.delevery-cost-form form p:last-child{
+
+.delevery-cost-form form p:last-child {
     margin-bottom: 0;
 }
 
-.delevery-cost-form form p label {font-size: 16px;line-height: 26px;margin-bottom: 10px;}
+.delevery-cost-form form p label {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
 
-.delevery-cost-form form p select {width: 100%;padding: 10px 15px;}
+.delevery-cost-form form p select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #333;
+}
 
 .delevery-cost-form form p select option {}
