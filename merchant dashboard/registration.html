@@ -57,12 +57,26 @@
       height: 100%;
     }
 
+    .bg-overlay {
+      position: absolute;
+      background: #0000006b;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+    }
+
     .registation-form {
       padding: 30px 25px;
-      box-shadow: 0 0;
-      background: #FFFFFF;
       box-shadow: 10px 15px 50px #00000014;
-      border-radius: 10px;
+      background: #fafafab3;
+      border-radius: 15px;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      position: relative;
+      max-width: 600px;
+      margin: 60px auto;
     }
 
     h1 {
@@ -77,12 +91,20 @@
     input,
     textarea,
     select {
-      border: 1px solid #ddd;
-      background-color: #fff;
-      padding: 10px 15px;
-      border-radius: 6px;
-      width: 100%;
       outline: none;
+      padding: 10px 12px;
+
+      border-radius: 4px;
+      resize: none;
+      border: 1px solid #fff;
+      color: #213540;
+      display: block;
+      width: 100%;
+      font-size: 14px;
+      line-height: 1.5;
+      background-color: #F1F3F4;
+      font-weight: 300;
+      box-shadow: none !important;
     }
 
     /* Mark input boxes that gets an error on validation: */
@@ -96,14 +118,36 @@
       display: none;
     }
 
+    .tab p {}
+
+    .tab label {
+      display: block;
+      font-weight: 500;
+      text-align: left;
+      color: #000000bf;
+      font-size: 13px;
+      position: relative;
+      margin-bottom: 5px;
+    }
+
     .tab h2 {
       font-size: 18px;
       line-height: 1;
-      margin-bottom: 15px;
       text-align: center;
+      text-transform: capitalize;
+      color: rgba(0, 0, 0, 0.85);
+      margin: 0 0 30px;
+      font-weight: 600;
     }
 
     /* Make circles that indicate the steps of the form: */
+    .step-int {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin: 20px 0;
+    }
+
     .step {
       height: 15px;
       width: 15px;
@@ -132,86 +176,155 @@
       width: auto;
       margin-right: 8px;
     }
+
+    .c-logo {
+      max-width: 200px;
+      margin: auto;
+    }
+
+    .c-logo img {
+      width: 100%;
+    }
+
+    .c-btn-area {}
+
+    .c-btn-group {
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+    .c-btn-group button {
+      width: 100%;
+    }
   </style>
 
 <body>
 
+  <!-- bg overlay -->
+  <div class="bg-overlay"></div>
 
 
+  <div class="container">
+    <div class="registation-form">
+      <form id="regForm" action="registration-success.html">
+        <div class="c-logo">
+          <img src="assets/img/logo.png" alt="">
+        </div>
+        <!-- Circles which indicates the steps of the form: -->
 
-  <div class="container py-5">
-    <div class="row pt-5">
-      <div class="col-md-6 offset-md-3">
-        <div class="registation-form">
-          <form id="regForm" action="registration-success.html">
-            <h1>Merchant Registration</h1>
+        <div class="step-int">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+        <!-- Account Info Tab -->
 
-            <!-- Account Info Tab -->
-
-            <div class="tab">
-              <h2>Account Info</h2>
+        <div class="tab">
+          <h2>Entrepreneur Info</h2>
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <label for="name">Merchant Name</label>
               <p><input type="text" placeholder="Name" oninput="this.className = ''" name="name"></p>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <label for="">Email Address</label>
               <p><input type="email" placeholder="Email" oninput="this.className = ''" name="email"></p>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <label for="">Mobile Number</label>
               <p><input type="text" placeholder="Mobile" oninput="this.className = ''" name="mobile"></p>
-              <p><input type="password" placeholder="Set up password" oninput="this.className = ''" name="password">
-              </p>
-              <p><input type="password" placeholder="Re-type password" oninput="this.className = ''" name="rpassword">
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <label for="">Set up password <small>(must be 8 digits)</small></label>
+              <p><input type="password" placeholder="Password" oninput="this.className = ''" name="password"></p>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <label for="">Re-type password</label>
+              <p><input type="password" placeholder="" oninput="this.className = ''" name="rpassword">
               </p>
             </div>
+          </div>
+        </div>
 
-            <!-- Company Info Tab -->
+        <!-- Company Info Tab -->
 
-            <div class="tab">
-              <h2>Company Info</h2>
-              <p><input type="text" placeholder="Company name" oninput="this.className = ''" name="company"></p>
-              <p><input type="url" placeholder="Website / Facebook page url" oninput="this.className = ''" name="url">
-              </p>
+        <div class="tab">
+          <h2>Company Info</h2>
+          <div class="row">
+            <div class="col-12">
+              <label for="">Company name</label>
+              <p><input type="text" placeholder="" oninput="this.className = ''" name="company"></p>
+            </div>
+            <div class="col-12">
+              <label for="">Website / Facebook page url</label>
+              <p><input type="url" placeholder="" oninput="this.className = ''" name="url"></p>
+            </div>
+            <div class="col-md-6 col-sm-6">
               <p>
+                <label for="">Find City names here</label>
                 <select id="city" oninput="this.className = ''" name="city" required>
-                  <option>Select your city</option>
+                  <option>Find City names her </option>
                   <option value="Dhaka">Dhaka</option>
                 </select>
               </p>
+            </div>
+            <div class="col-md-6 col-sm-6">
               <p>
+                <label for="">Select your zone</label>
                 <select id="zone" oninput="this.className = ''" name="zone" required>
-                  <option>Select your zone</option>
+                  <option>Find Zone names here</option>
                   <option value="Dhaka">Ibrahimpur</option>
                 </select>
               </p>
+            </div>
+            <div class="col-12">
+              <label for="">Company Address</label>
               <p>
-                <textarea id="address" rows="5" type="text" placeholder="Address" oninput="this.className = ''"
-                  name="address" required></textarea>
+                <textarea id="address" rows="3" type="text" placeholder="" oninput="this.className = ''" name="address"
+                  required></textarea>
               </p>
             </div>
+          </div>
+        </div>
 
-            <!-- Payment Dtailes -->
+        <!-- Payment Dtailes -->
 
-            <div class="tab">
-              <h2>Payment Dtailes</h2>
+        <div class="tab">
+          <h2>Payment Dtailes</h2>
+          <div class="row">
+            <div class="col-12">
+              <label for="">Payment Method</label>
               <p>
                 <select id="paymentselector" oninput="this.className = ''" name="paymentselector" required>
-                  <option>Select your payment method</option>
+                  <option>Select payment method</option>
                   <option value="bank">Bank</option>
                   <option value="bkash">bKash</option>
                 </select>
               </p>
+            </div>
+          </div>
 
-              <div id="bank" class="payment">
-                <p>
-                  <select id="bank" oninput="this.className = ''" name="bank" required>
-                    <option value="">Select your bank</option>
-                    <option value="brac">BRAC</option>
-                    <option value="dbbl">DBBL</option>
-                  </select>
-                </p>
-                <p><input type="text" placeholder="Bank Account Holder" oninput="this.className = ''"></p>
-                <p><input type="text" placeholder="Bank Account No" oninput="this.className = ''"></p>
-                <p><input type="text" placeholder="Branch Name" oninput="this.className = ''"></p>
-                <p><input type="text" placeholder="Routing No" oninput="this.className = ''"></p>
-              </div>
+          <!-- if payment method is bank -->
+          <div id="bank" class="payment">
 
-              <!-- if payment method is bkash -->
-              <div id="bkash" class="payment">
+            <p>
+              <select id="bank" oninput="this.className = ''" name="bank" required>
+                <option value="">Select your bank</option>
+                <option value="brac">BRAC</option>
+                <option value="dbbl">DBBL</option>
+              </select>
+            </p>
+            <p><input type="text" placeholder="Bank Account Holder" oninput="this.className = ''"></p>
+            <p><input type="text" placeholder="Bank Account No" oninput="this.className = ''"></p>
+            <p><input type="text" placeholder="Branch Name" oninput="this.className = ''"></p>
+            <p><input type="text" placeholder="Routing No" oninput="this.className = ''"></p>
+          </div>
+
+          <!-- if payment method is bkash -->
+          <div id="bkash" class="payment">
+            <div class="row">
+              <div class="col-md-6 .col-sm-6">
+                <label for="">Account Type</label>
                 <p>
                   <select id="bkashat" oninput="this.className = ''" name="bkashat" required>
                     <option value="">Select account type</option>
@@ -219,37 +332,39 @@
                     <option value="personal">Personal</option>
                   </select>
                 </p>
+              </div>
+              <div class="col-md-6 .col-sm-6">
+                <label for="">Bkash Mobile Number</label>
                 <p><input type="text" placeholder="Bkash Number" oninput="this.className = ''"></p>
               </div>
-
-              <p class="terms">
-                <label for="terms">
-                  <input type="checkbox" id="terms">Accept our <a href="#" target="_blank">Terms AndConditions</a>
-                </label>
-              </p>
-
             </div>
-            <!-- Payment Dtailes Step end  -->
+          </div>
 
-            <div style="overflow:auto;">
-              <div style="float:right;">
-                <button class="nav-link btn-theme" type="button" id="prevBtn"
-                  onclick="nextPrev(-1)"><span>Previous</span></button>
-                <button class="nav-link btn-theme active" type="button" id="nextBtn"
-                  onclick="nextPrev(1)"><span>Next</span></button>
-              </div>
-            </div>
 
-            <!-- Circles which indicates the steps of the form: -->
-            
-            <div style="text-align:center;margin-top:40px;">
-              <span class="step"></span>
-              <span class="step"></span>
-              <span class="step"></span>
-            </div>
-          </form>
+
+          <p class="terms">
+            <label for="terms">
+              <input type="checkbox" id="terms">Accept our <a href="#" target="_blank" class="w-auto">Terms AndConditions</a>
+            </label>
+          </p>
+
         </div>
-      </div>
+        <!-- Payment Dtailes Step end  -->
+
+        <div class="c-btn-group">
+          <div class="row">
+            <div class="col-6">
+              <button class="nav-link btn-theme" type="button" id="prevBtn"
+                onclick="nextPrev(-1)"><span>Previous</span></button>
+            </div>
+            <div class="col-6">
+              <button class="nav-link btn-theme active" type="button" id="nextBtn"
+                onclick="nextPrev(1)"><span>Next</span></button>
+            </div>
+          </div>
+        </div>
+
+      </form>
     </div>
   </div>
 
