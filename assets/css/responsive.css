@@ -7,6 +7,22 @@
     .nav-item {
         margin-left: 10px;
     }
+
+    .progress-bar-step p::before {
+        letter-spacing: 9px;
+    }
+
+    .progress-bar-step p::after {
+        letter-spacing: 8px;
+    }
+
+    .progress-bar-step p.active::before {
+        letter-spacing: 9px;
+    }
+
+    .progress-bar-step p.active::after {
+        letter-spacing: 8px;
+    }
 }
 
 /* // Large devices (desktops, less than 1200px) */
@@ -22,6 +38,27 @@
     .navbar-brand {
         max-width: 130px;
     }
+
+    .progress-bar-step p::before {
+        letter-spacing: 10px;
+        content: '..';
+    }
+
+    .progress-bar-step p::after {
+        letter-spacing: 10px;
+        content: '..';
+    }
+
+    .progress-bar-step p.active::before {
+        letter-spacing: 10px;
+        content: '..';
+    }
+
+    .progress-bar-step p.active::after {
+        letter-spacing: 10px;
+        content: '..';
+    }
+
 }
 
 /* // Medium devices (tablets, less than 992px) */
@@ -132,6 +169,22 @@
         height: auto;
     }
 
+    .progress-bar-step p::before {
+        content: '.';
+    }
+
+    .progress-bar-step p::after {
+        content: '.';
+    }
+
+    .progress-bar-step p.active::before {
+        content: '.';
+    }
+
+    .progress-bar-step p.active::after {
+        content: '.';
+    }
+
 }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -148,6 +201,66 @@
         text-align: center;
         line-height: 2;
         margin-bottom: 25px;
+    }
+
+    .progress-bar-step {
+        display: table;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+    .progress-bar-step .step-text {
+        width: 100%;
+        margin-left: 25px;
+        padding: 16px 0;
+    }
+
+    .progress-bar-step p {
+        display: table-cell;
+    }
+
+    .progress-bar-step p::before {
+        letter-spacing: 10px;
+        content: '.';
+        transform: rotate(90deg);
+        top: auto;
+        bottom: -17px;
+        left: 34px;
+    }
+
+    .progress-bar-step p::after {
+        letter-spacing: 10px;
+        content: '.';
+        transform: rotate(90deg);
+        top: -26px;
+        left: 35px;
+    }
+
+    .progress-bar-step p.active::before {
+        letter-spacing: 10px;
+        content: '.';
+    }
+
+    .progress-bar-step p.active::after {
+        letter-spacing: 10px;
+        content: '.';
+    }
+
+    .step-progress-area .col-md-2:first-child .progress-bar-step p::before {
+        display: block;
+    }
+
+    .step-progress-area .col-md-2:first-child .progress-bar-step p::after {
+        display: none;
+    }
+
+    .step-progress-area .col-md-2:last-child .progress-bar-step p::before {
+        display: none;
+    }
+
+    .step-progress-area .col-md-2:last-child .progress-bar-step p::after {
+        display: block;
     }
 }
 
@@ -184,5 +297,9 @@
 
     .instant-quote p {
         margin-bottom: 30px;
+    }
+
+    .step-progress-area {
+        padding: 0 50px;
     }
 }
