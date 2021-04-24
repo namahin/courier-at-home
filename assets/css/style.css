@@ -442,7 +442,8 @@ header {
     font-size: 14px;
     margin: 0;
 }
-.story-sec{
+
+.story-sec {
     padding: 100px 0;
     background-image: url(../media/images/story-sec-bg.png);
     background-repeat: repeat;
@@ -451,6 +452,7 @@ header {
     background-attachment: fixed;
     background-color: #fafafa;
 }
+
 .partner-content h3 {
     letter-spacing: .35px;
     color: #3a3a3a;
@@ -469,13 +471,16 @@ header {
     margin-top: 0;
     margin-bottom: 30px;
 }
-.franchisee-sec{
+
+.franchisee-sec {
     background-color: #092330;
 }
-.franchisee-sec h3{
+
+.franchisee-sec h3 {
     color: #fff;
 }
-.franchisee-sec p{
+
+.franchisee-sec p {
     color: #ffffffe3;
 }
 
