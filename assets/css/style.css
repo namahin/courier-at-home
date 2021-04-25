@@ -1170,54 +1170,57 @@ header {
 .info-card {
     display: table;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .info-card .icon {
-    width: 30px;
+    width: 25px;
     text-align: center;
     display: table-cell;
     vertical-align: top;
-    padding-top: 8px;
+    padding-top: 3px;
 }
 
 .info-card .icon i {
-    font-size: 30px;
+    font-size: 25px;
     color: #ED4C21;
 }
 
 .info-card .text {
-    padding-left: 30px;
+    padding-left: 20px;
+    margin: 0;
 }
 
 .info-card .text h3 {
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 20px;
     margin-bottom: 5px;
+    font-weight: 500;
 }
 
 .info-card .text p {
     color: #333;
     margin: 0;
-    line-height: 22px;
+    line-height: 19px;
 }
 
 .contact-area {}
 
 .contact-area h3 {
     font-size: 22px;
-    line-height: 39px;
+    line-height: 32px;
     color: #333;
     margin-bottom: 30px;
+    font-weight: 500;
 }
 
 
 .map-sec {
-    padding-top: 67px;
+    margin-bottom: 30px;
 }
 
 .map-sec iframe {
-    height: 450px;
+    height: 260px;
     width: 100%;
 }
 
