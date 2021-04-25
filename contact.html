@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Coverage Map | Courier @ Home</title>
+    <title>Contact Us | Courier @ Home</title>
     <link rel="shortcut icon" href="assets/media/images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -34,6 +34,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css">
     <!-- Bootstrap v5.0.0-beta1 CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- UIkit v3.6.15 CSS CDN -->
@@ -45,6 +47,7 @@
     <!-- Owl Carousel v2.3.4 CSS -->
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+
     <!-- Theme CSS -->
     <link rel="stylesheet" media="all" href="assets/css/style.css">
     <link rel="stylesheet" media="all" href="assets/css/responsive.css">
@@ -72,26 +75,65 @@
                                 <a class="nav-link" aria-current="page" href="tracking.html">Tracking</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Price Quotation</a></li>
-                                    <li><a class="dropdown-item" href="#">Pricing Information</a></li>
-                                </ul>
+                                <div class="uk-inline mobile-menu-alt">
+                                    <a href="#" class="nav-link dropdown-toggle">Services</a>
+                                    <div class="services-dropdown" uk-dropdown="pos: bottom-center;">
+                                        <ul class="services-item">
+                                            <li><a href="#">
+                                                    <img src="assets/media/images/icon.svg" alt="">
+                                                    <p>Services Item</p>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <img src="assets/media/images/icon.svg" alt="">
+                                                    <p>Services Item</p>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <img src="assets/media/images/icon.svg" alt="">
+                                                    <p>Services Item</p>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <img src="assets/media/images/icon.svg" alt="">
+                                                    <p>Services Item</p>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <img src="assets/media/images/icon.svg" alt="">
+                                                    <p>Services Item</p>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <img src="assets/media/images/icon.svg" alt="">
+                                                    <p>Services Item</p>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <img src="assets/media/images/icon.svg" alt="">
+                                                    <p>Services Item</p>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <img src="assets/media/images/icon.svg" alt="">
+                                                    <p>Services Item</p>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <img src="assets/media/images/icon.svg" alt="">
+                                                    <p>Services Item</p>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="coverage-map.html">Coverage Map</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tel:+88017XXXXXXXX"><i
-                                        class="fas fa-phone-alt"></i>017XXXXXXXX</a>
+                                <a class="nav-link" href="tel:+88017XXXXXXXX"><i class="fas fa-phone-alt"></i><span
+                                        class="cell-phone">017XXXXXXXX</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn-theme"
-                                    href="merchant dashboard/registration.html">Registration</a>
+                                    href="merchant dashboard/registration.html"><span>Registration</span></a>
                             </li>
                             <li class="nav-item ms-lg-3">
-                                <a class="nav-link btn-theme active" href="merchant dashboard/login.html">Login</a>
+                                <a class="nav-link btn-theme active"
+                                    href="merchant dashboard/login.html"><span>Login</span></a>
                             </li>
                         </ul>
                     </div>
@@ -100,103 +142,108 @@
         </div>
     </header>
     <!-- navigation header end here -->
+    <!-- google map -->
+    <section class="map-sec">
+        <iframe src="https://maps.google.com/maps?q=noore%20alam%20mahin&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </section>
+    <!-- google map end -->
 
-    <!-- ************************************** -->
-    <!-- Coverage Map page -->
-    <section class="coverage-map-sec py-5">
-        <div class="container py-5">
+    <!-- contact form section -->
+    <section class="contact-sec">
+        <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <div class="sec-title my-5">
-                        <h2 class="text-left">Courier Charges List (Dhaka City)</h2>
-                    </div>
-                    <div class="pricing-area">
-                        <div class="row">
-                            <div class="col-md-8 col-ms-12">
-                                <div class="table-responsive mb-3">
-                                    <table class="table table-striped table-hover text-center">
-                                        <thead class="table-light">
-                                            <tr>
-                                                <th>Product weight</th>
-                                                <th>Regular Delivery Price</th>
-                                                <th>Same Day Delivery Price</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>0 - 1 kg</td>
-                                                <td>50 tk</td>
-                                                <td>80 tk</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1 - 2 kg</td>
-                                                <td>65 tk</td>
-                                                <td>95 tk</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2 - 3 kg</td>
-                                                <td>80 tk</td>
-                                                <td>105 tk</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3 - 4 kg</td>
-                                                <td>100 tk</td>
-                                                <td>155 tk</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4 - 5 kg</td>
-                                                <td>120 tk</td>
-                                                <td>205 tk</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5 - 6 kg</td>
-                                                <td>250 tk</td>
-                                                <td>305 tk</td>
-                                            </tr>
-                                            <tr>
-                                                <td>6 - 7 kg</td>
-                                                <td>350 tk</td>
-                                                <td>405 tk</td>
-                                            </tr>
-                                            <tr>
-                                                <td>7 - 10 kg</td>
-                                                <td>500 tk</td>
-                                                <td>555 tk</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                <div class="col-md-5 col-sm-12">
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="text">
+                                <h3>Address</h3>
+                                <p>House# 533, Block# C, Khilgaon <br>Dhaka-1219, Bangladesh</p>
                             </div>
                         </div>
-                        <p>কিছু স্পেশাল অথবা বড় প্রোডাক্টের ক্ষেত্রে উপরে উল্লেখিত প্রোডাক্টের সাইজের জন্য নির্ধারিত
-                            ডেলিভারি চার্জ থেকে বেশি ডেলিভারি চার্জ প্রদান করতে হবে।</p>
-                        <ul>
-                            <h3>Our Features</h3>
-                            <li>Instant Payment- Receive your payment after delivery of your product to the customer.
-                            </li>
-                            <li>Cash on Delivery- Best COD rate (inside Dhaka- 0% & outside- 1%).</li>
-                            <li>Live Tracking – Now view the current location of your parcel from anywhere in the world.
-                            </li>
-                            <li>Daily Pick up- We reach merchant’s doorstep every day to bring their dream.</li>
-                            <li>No Return Charge- No return charge for the convenience of the merchant.</li>
-                            <li>Delivery within 24 Hours- Get your parcel inside Dhaka within 24 hours.</li>
-                            <li>Delivery Confirmation with OTP- Our OTP verification process ensure the security of the
-                                delivered package.</li>
-                        </ul>
+                        <div class="info-card">
+                            <div class="icon"><i class="fas fa-envelope-open"></i></div>
+                            <div class="text">
+                                <h3>Email Us</h3>
+                                <p><a href="mailto:support@courierathome.com">support@courierathome.com</a></p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="text">
+                                <h3>Call Us</h3>
+                                <p><a href="tel:+8809643100100">09643 100 100</a></p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="col-md-7 col-sm-12">
+                    <div class="">
+                        <h3>If you find any problem to send courier or need business inquiries, fill the form and send
+                            to us.</h3>
+                        <form action="" class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="input-field">
+                                        <input type="text" id="name" onkeyup="this.setAttribute('value', this.value);"
+                                            value="" required><label for="name">Name</label>
+                                    </div>
+                                </div>
 
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="input-field">
+                                        <input type="tel" id="phone" onkeyup="this.setAttribute('value', this.value);"
+                                            value="" required><label for="phone">Phone</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="input-field">
+                                        <input type="email" id="email" onkeyup="this.setAttribute('value', this.value);"
+                                            value="" required><label for="email">Email</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="input-field">
+                                        <select name="subject" onkeyup="this.setAttribute('value', this.value);">
+                                            <option value="">Select Subject</option>
+                                            <option value="Business Query">Business Query</option>
+                                            <option value="Registration Query">Registration Query</option>
+                                            <option value="Service Query">Service Query</option>
+                                            <option value="Shipment Delivery & Pick">Shipment Delivery & Pick</option>
+                                            <option value="Billing And Payment">Billing And Payment</option>
+                                            <option value="Others">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="input-field">
+                                        <textarea name="message" id="message" rows="5"
+                                            onkeyup="this.setAttribute('value', this.value);" value=""
+                                            required></textarea><label for="message">Your message</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="text-md-right">
+                                <button type="submit" class="btn-theme active w-100" role="button"><span>Send
+                                        Message</span></button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- contact form section end -->
 
 
 
 
 
-
-
-    <!-- ************************************** -->
 
 
 
@@ -239,7 +286,8 @@
                                     <li><a href="packaging-services/">Packaging Services</a></li>
                                     <li><a href="fraud-detection-service/">Fraud Detection Service</a></li>
                                     <li><a href="facebook-sales-automation/">Facebook Sales Automation</a></li>
-                                    <li><a href="fragile-and-liquid-item-delivery/">Fragile & LiquidItem Delivery</a>
+                                    <li><a href="fragile-and-liquid-item-delivery/">Fragile & LiquidItem
+                                            Delivery</a>
                                     </li>
                                 </ul>
                             </div>
@@ -257,6 +305,8 @@
                                         href="tel:+88017XXXXXXXX">017XXXXXXXX</a> |
                                     <span>Email Us</span>
                                     <a href="mailto:support@courierathome.com">support@courierathome.com</a></p>
+                                <p class="m-1" style="font-size: 14px; text-align: left; opacity: .5;"><b>Address:
+                                    </b>House# 533, Block# C, Khilgaon, Dhaka-1219, Bangladesh</p>
                             </div>
                             <div class="col-md-4 text-right">
                                 <ul class="footer-social">
@@ -279,7 +329,8 @@
                     <div class="copyright">
                         <p>Copyright &copy;<script>
                                 document.write(new Date().getFullYear())
-                            </script> Courier @ Home. All rights reserved. <a href="privacy-policy">Privacy Policy</a>
+                            </script> Courier @ Home. All rights reserved. <a href="privacy-policy">Privacy
+                                Policy</a>
                             <a href="terms-and-condition">Terms and Condition</a></p>
                         <img src="..." alt="dotpixel">
                     </div>
@@ -291,8 +342,10 @@
     <!-- footer section end here -->
     <!-- Script -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.animateTyping.min.js"></script>
     <script src="assets/js/app.js"></script>
 
 </body>
