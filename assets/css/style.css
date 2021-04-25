@@ -1161,6 +1161,57 @@ header {
 
 
 /* contact page */
+.contact-sec {
+    padding-top: 80px;
+}
+
+.contact-info {}
+
+.info-card {
+    display: table;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.info-card .icon {
+    width: 30px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: top;
+    padding-top: 8px;
+}
+
+.info-card .icon i {
+    font-size: 30px;
+    color: #ED4C21;
+}
+
+.info-card .text {
+    padding-left: 30px;
+}
+
+.info-card .text h3 {
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 5px;
+}
+
+.info-card .text p {
+    color: #333;
+    margin: 0;
+    line-height: 22px;
+}
+
+.contact-area {}
+
+.contact-area h3 {
+    font-size: 22px;
+    line-height: 39px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+
 .map-sec {
     padding-top: 67px;
 }
