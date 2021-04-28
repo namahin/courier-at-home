@@ -131,6 +131,12 @@
       margin-bottom: 5px;
     }
 
+    .tab label sup {
+      color: #d30e00;
+      font-size: 16px;
+      top: 0;
+    }
+
     .tab h2 {
       font-size: 18px;
       line-height: 1;
@@ -223,7 +229,61 @@
 
     .c-btn-group button {
       width: 100%;
-      
+
+    }
+
+    /* btn css */
+    .btn-theme {
+      color: #ed4c21 !important;
+      background-color: #fff;
+      border: 1px solid;
+      box-sizing: border-box;
+      border-radius: 5px;
+      padding: 12px 30px !important;
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-theme span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-theme:hover {
+      color: #fff !important;
+      border-color: #ed4c21;
+    }
+
+    .btn-theme.active {
+      background-color: #ed4c21;
+      color: #fff !important;
+      border-color: #ed4c21;
+    }
+
+    .btn-theme.active:hover {
+      background-color: #d30e00;
+      border-color: #F75028;
+    }
+
+    .btn-theme::before {
+      content: '';
+      position: absolute;
+      background-color: #ed4c21;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      transition: linear .3s;
+      border-radius: 4px;
+    }
+
+    .btn-theme:hover::before {
+      width: 100%;
+      left: 0;
+      right: auto;
+      transition: linear .3s;
     }
   </style>
 
@@ -248,8 +308,8 @@
         </div> -->
 
         <ul class="step-int">
-          <li class="step"><span>1</span><small>Company Info</small></li>
           <li class="step"><span>2</span><small>Account Info</small></li>
+          <li class="step"><span>1</span><small>Company Info</small></li>
           <li class="step"><span>3</span><small>Payment Details</small></li>
         </ul>
 
@@ -261,23 +321,23 @@
           <h2>Entrepreneur Info</h2>
           <div class="row">
             <div class="col-md-12 col-sm-12">
-              <label for="name">Merchant Name</label>
+              <label for="name">Merchant Name<sup>*</sup></label>
               <p><input type="text" placeholder="Name" oninput="this.className = ''" name="name"></p>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <label for="">Mobile Number<sup>*</sup></label>
+              <p><input type="text" placeholder="Mobile" oninput="this.className = ''" name="mobile"></p>
             </div>
             <div class="col-md-6 col-sm-6">
               <label for="">Email Address</label>
               <p><input type="email" placeholder="Email" oninput="this.className = ''" name="email"></p>
             </div>
             <div class="col-md-6 col-sm-6">
-              <label for="">Mobile Number</label>
-              <p><input type="text" placeholder="Mobile" oninput="this.className = ''" name="mobile"></p>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <label for="">Set up password <small>(must be 8 digits)</small></label>
+              <label for="">Set up password <small>(must be 8 digits)</small><sup>*</sup></label>
               <p><input type="password" placeholder="Password" oninput="this.className = ''" name="password"></p>
             </div>
             <div class="col-md-6 col-sm-6">
-              <label for="">Re-type password</label>
+              <label for="">Re-type password<sup>*</sup></label>
               <p><input type="password" placeholder="" oninput="this.className = ''" name="rpassword">
               </p>
             </div>
@@ -290,7 +350,7 @@
           <h2>Company Info</h2>
           <div class="row">
             <div class="col-12">
-              <label for="">Company name</label>
+              <label for="">Company name<sup>*</sup></label>
               <p><input type="text" placeholder="" oninput="this.className = ''" name="company"></p>
             </div>
             <div class="col-12">
@@ -299,7 +359,7 @@
             </div>
             <div class="col-md-6 col-sm-6">
               <p>
-                <label for="">Find City names here</label>
+                <label for="">Find City names here<sup>*</sup></label>
                 <select id="city" oninput="this.className = ''" name="city" required>
                   <option>Find City names her </option>
                   <option value="Dhaka">Dhaka</option>
@@ -308,7 +368,7 @@
             </div>
             <div class="col-md-6 col-sm-6">
               <p>
-                <label for="">Select your zone</label>
+                <label for="">Select your location<sup>*</sup></label>
                 <select id="zone" oninput="this.className = ''" name="zone" required>
                   <option>Find Zone names here</option>
                   <option value="Dhaka">Ibrahimpur</option>
@@ -316,7 +376,7 @@
               </p>
             </div>
             <div class="col-12">
-              <label for="">Company Address</label>
+              <label for="">Company Address<sup>*</sup></label>
               <p>
                 <textarea id="address" rows="3" type="text" placeholder="" oninput="this.className = ''" name="address"
                   required></textarea>
@@ -331,7 +391,7 @@
           <h2>Payment Dtailes</h2>
           <div class="row">
             <div class="col-12">
-              <label for="">Payment Method</label>
+              <label for="">Payment Method<sup>*</sup></label>
               <p>
                 <select id="paymentselector" oninput="this.className = ''" name="paymentselector" required>
                   <option>Select payment method</option>
@@ -346,7 +406,7 @@
           <div id="bank" class="payment">
             <div class="row">
               <div class="col-12">
-                <label for="">Select Bank</label>
+                <label for="">Select Bank<sup>*</sup></label>
                 <p>
                   <select id="bank" oninput="this.className = ''" name="bank" required>
                     <option value="">Select your bank</option>
@@ -355,20 +415,20 @@
                   </select>
                 </p>
               </div>
-              <div class="col-md-6 .col-sm-6">
-                <label for="">Bank Account Holder</label>
+              <div class="col-md-6 col-sm-6">
+                <label for="">Bank Account Holder<sup>*</sup></label>
                 <p><input type="text" placeholder="" oninput="this.className = ''"></p>
               </div>
-              <div class="col-md-6 .col-sm-6">
-                <label for="">Bank Account No</label>
+              <div class="col-md-6 col-sm-6">
+                <label for="">Bank Account No<sup>*</sup></label>
                 <p><input type="text" placeholder="" oninput="this.className = ''"></p>
               </div>
-              <div class="col-md-6 .col-sm-6">
-                <label for="">Branch Name</label>
+              <div class="col-md-6 col-sm-6">
+                <label for="">Branch Name<sup>*</sup></label>
                 <p><input type="text" placeholder="" oninput="this.className = ''"></p>
               </div>
-              <div class="col-md-6 .col-sm-6">
-                <label for="">Routing No</label>
+              <div class="col-md-6 col-sm-6">
+                <label for="">Routing No<sup>*</sup></label>
                 <p><input type="text" placeholder="" oninput="this.className = ''"></p>
               </div>
             </div>
@@ -377,19 +437,24 @@
           <!-- if payment method is bkash -->
           <div id="bkash" class="payment">
             <div class="row">
-              <div class="col-md-6 .col-sm-6">
-                <label for="">Account Type</label>
+              <div class="col-12">
+                <label for="">Account Type<sup>*</sup></label>
                 <p>
                   <select id="bkashat" oninput="this.className = ''" name="bkashat" required>
                     <option value="">Select account type</option>
-                    <option value="agent">Agent</option>
                     <option value="personal">Personal</option>
+                    <option value="merchant">Merchant</option>
+                    <option value="agent">Agent</option>
                   </select>
                 </p>
               </div>
-              <div class="col-md-6 .col-sm-6">
-                <label for="">Bkash Mobile Number</label>
+              <div class="col-md-6 col-sm-6">
+                <label for="">Bkash Mobile Number<sup>*</sup></label>
                 <p><input type="text" placeholder="Bkash Number" oninput="this.className = ''"></p>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <label for="">Confirm Bkash Mobile Number<sup>*</sup></label>
+                <p><input type="text" placeholder="Re-type Bkash Number" oninput="this.className = ''"></p>
               </div>
             </div>
           </div>
