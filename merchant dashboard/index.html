@@ -129,51 +129,57 @@
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-header card-header-success">
-                                        <h4 class="card-title">Customer Information</h4>
-                                        <p class="card-category">Input Customer Additional Information</p>
+                                        <h4 class="card-title mb-0">Package and collection information</h4>
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="bmd-label-floating">Customer Name <sup>*</sup></label>
-                                                    <input type="text" class="form-control" required>
+                                                    <label class="bmd-label-floating text-dark">Own reference number /
+                                                        invoice<sup>*</sup></label>
+
+                                                    <input type="text" name="invoice" class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="bmd-label-floating text-dark">Actual package
+                                                        price<sup>*</sup></label>
+                                                    <input type="text" name="collection_amount" class="form-control"
+                                                        required>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="bmd-label-floating">Mobile Number <sup>*</sup></label>
-                                                    <input type="text" class="form-control" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="bmd-label-floating">Another Mobile Number</label>
-                                                    <input type="email" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <select name="" id="" class="form-control" required>
-                                                        <option value="">Select district</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <select name="" id="" class="form-control" required>
-                                                        <option value="">Select Thana / Area</option>
+                                                    <select name="collection_district_id" id="collectionDistrict"
+                                                        class="form-control" required>
+                                                        <option value=" ">Collection district</option>
+                                                        <option value="1">Dhaka</option>
                                                     </select>
                                                 </div>
                                             </div>
+
                                             <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select name="collection_zone_id" id="collectionZone"
+                                                        class="form-control" required>
+                                                        <option value=" ">Collection location</option>
+                                                        <option value="1">Kafrul</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <div class="form-group">
-                                                        <label class="bmd-label-floating">Detailed Address (House / Road
-                                                            / Village)</label>
-                                                        <textarea class="form-control pb-3" rows="4"></textarea>
+                                                        <label class="bmd-label-floating text-dark">Additional note
+                                                            (optional)</label>
+                                                        <textarea name="description" class="form-control pb-3"
+                                                            rows="4"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -185,81 +191,161 @@
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-header card-header-success">
-                                        <h4 class="card-title mb-0">Package and collection information</h4>
-                                        <!-- <p class="card-category"></p> -->
+                                        <h4 class="card-title mb-0">Customer Information</h4>
+
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="bmd-label-floating">Own reference number / invoice
-                                                        <sup>*</sup></label>
-                                                    <input type="text" class="form-control" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="bmd-label-floating">Actual package price</label>
-                                                    <input type="email" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <select name="" id="" class="form-control" required>
-                                                        <option value="">Collection location</option>
-                                                    </select>
+                                                    <label class="bmd-label-floating text-dark">Customer
+                                                        Name<sup>*</sup></label>
+                                                    <input type="text" name="name" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <select name="" id="" class="form-control" required>
-                                                        <option value="">Weight (kg)</option>
+                                                    <label class="bmd-label-floating text-dark">Mobile
+                                                        Number<sup>*</sup></label>
+                                                    <input type="text" name="mobile" class="form-control" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="bmd-label-floating text-dark">Another Mobile
+                                                        Number</label>
+                                                    <input type="text" name="another_mobile" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select name="district_id" id="district" class="form-control"
+                                                        required>
+                                                        <option value=" ">Select district</option>
+                                                        <option value="1">Dhaka</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12">
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select name="thana_id" id="thanaId" class="form-control" required>
+                                                        <option value=" ">Select Thana / Area</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
                                                 <div class="form-group">
                                                     <div class="form-group">
-                                                        <label class="bmd-label-floating">Additional note
-                                                            (optional)</label>
-                                                        <textarea class="form-control pb-3" rows="4"></textarea>
+                                                        <label class="bmd-label-floating text-dark">Detailed Address
+                                                            (House / Road / Village)</label>
+                                                        <textarea name="address" class="form-control pb-3"
+                                                            rows="2"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select name="parcel_type_id" id="parcelType" class="form-control"
+                                                        required>
+                                                        <option value=" ">Select Parcel Type</option>
+                                                        <option value="documents">Documents</option>
+                                                        <option value="parcel">Parcel</option>
+                                                        <option value="mobile">Mobile</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select id="weightId" class="form-control">
+                                                        <option value="">Weight (kg)</option>
+                                                        <option value="01">0 - 1 kg</option>
+                                                        <option value="01">1 - 2 kg</option>
+                                                    </select>
+                                                    <input type="hidden" name="shipment_id" id="shipmentId" value="">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select id="weightId" class="form-control">
+                                                        <option value="">Unit</option>
+                                                        <option value="1">1pcs</option>
+                                                        <option value="2">2pcs</option>
+                                                    </select>
+                                                    <input type="hidden" name="shipment_id" id="shipmentId" value="">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <hr>
+                                                <label class="bmd-label-floating text-dark">Choose Our Service</label>
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" id="Service"
+                                                        name="Service" value="regular">
+                                                    <label class="custom-control-label text-dark" for="Service">Delivery
+                                                        Only</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" id="Service1"
+                                                        name="Service" value="same-day">
+                                                    <label class="custom-control-label  text-dark"
+                                                        for="Service1">Delivery + Taka Collection</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <hr>
+                                                <label class="bmd-label-floating text-dark">Choose Delivery
+                                                    Option</label>
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input"
+                                                        id="defaultUnchecked" name="charge" value="regular">
+                                                    <label class="custom-control-label text-dark"
+                                                        for="defaultUnchecked">Regular Delivery</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" id="defaultChecked"
+                                                        name="charge" value="same-day">
+                                                    <label class="custom-control-label  text-dark"
+                                                        for="defaultChecked">Express Delivery</label>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        <button type="submit" class="btn btn-primary pull-right">Place Order</button>
-                                        <div class="clearfix"></div>
+                                        <button type="submit" class="btn btn-primary pull-right">Create Place</button>
                                     </div>
+                                    <div class="clearfix"></div>
                                 </div>
                             </div>
                         </div>
-                    </form>
+                </div>
+                </form>
 
 
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="float-left">
+                    <ul>
+                        <li><a href="#" target="_blank">Site</a></li> <!-- main website url -->
+                        <li><a href="#">About Us</a></li> <!-- main website about us url -->
+                        <li><a href="#">Blog</a></li> <!-- main website blog url -->
+                    </ul>
+                </nav>
+                <div class="copyright float-right">
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>, <a href="#" target="_blank">Courier @ Home</a>
                 </div>
             </div>
-            <footer class="footer">
-                <div class="container-fluid">
-                    <nav class="float-left">
-                        <ul>
-                            <li><a href="#" target="_blank">Site</a></li> <!-- main website url -->
-                            <li><a href="#">About Us</a></li> <!-- main website about us url -->
-                            <li><a href="#">Blog</a></li> <!-- main website blog url -->
-                        </ul>
-                    </nav>
-                    <div class="copyright float-right">
-                        &copy;
-                        <script>
-                            document.write(new Date().getFullYear())
-                        </script>, <a href="#" target="_blank">Courier @ Home</a>
-                    </div>
-                </div>
-            </footer>
-        </div>
+        </footer>
+    </div>
     </div>
 
     <!--   Core JS Files   -->
