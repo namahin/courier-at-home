@@ -319,7 +319,7 @@ header {
 }
 
 .service-sec {
-    margin-bottom: 80px;
+    padding-bottom: 100px;
 }
 
 .service-card {
@@ -407,8 +407,13 @@ header {
 }
 
 .feature-sec {
-    margin-top: 150px;
-    padding-bottom: 100px;
+    padding: 100px 0;
+    padding-top: 80px;
+    background-image: url(../media/images/hill.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    background-position: right 130px;
 }
 
 .feature-item {
@@ -441,6 +446,36 @@ header {
     color: #3a3a3a;
     font-size: 14px;
     margin: 0;
+}
+
+.about-sec {
+    background-image: url(../media/images/about-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    background-color: #fff;
+    padding: 50px 0;
+    position: relative;
+}
+
+.story-box {
+    position: relative;
+}
+
+.story-box h2,
+.story-box article,
+.story-box p {
+    color: #fff;
+}
+
+.about-sec::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, #00000000 1%, #00000033 42%, #00000099 69%, #000000cc 100%);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
 
 .story-sec {
@@ -1294,3 +1329,40 @@ header {
     outline: none;
     border: 1px solid #ed4c21;
 }
+
+.uk-tab::before {}
+
+.uk-tab>*>a {
+    color: #333;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 700;
+    border-width: 2px;
+}
+
+.uk-tab>.uk-active>a {
+    border-color: #ed4c21;
+}
+
+.price-table {}
+
+.price-table table {
+    min-width: 650px;
+}
+
+.price-tab table tr b,
+.price-tab table tr th {
+    font-weight: 600;
+}
+
+.faq-accordion {}
+
+.faq-accordion li {}
+
+.faq-accordion li .uk-accordion-title {}
+
+.faq-accordion li .uk-accordion-content {}
+
+.faq-accordion li .uk-accordion-content p {}
+
+.faq-accordion li .uk-accordion-content p a {}
