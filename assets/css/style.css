@@ -240,7 +240,8 @@ header {
     width: 900px;
 }
 
-.home-banner .banner-content h1 {
+.home-banner .banner-content h1,
+.home-banner .banner-content h2 {
     color: #fff;
     font-size: 48px;
     font-weight: 900;
@@ -249,8 +250,13 @@ header {
     letter-spacing: 1px;
 }
 
-.home-banner .banner-content h1 span {
+.home-banner .banner-content h1 span,
+.home-banner .banner-content h2 ‍span {
     color: #ed4c21;
+}
+
+.home-banner .banner-content h2 {
+    display: none;
 }
 
 .home-banner .banner-content p {
@@ -410,10 +416,14 @@ header {
     padding: 100px 0;
     padding-top: 80px;
     background-image: url(../media/images/hill.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-x;
+    background-size: 1100px;
     background-color: #fff;
-    background-position: right 130px;
+    background-position: center 150px;
+}
+
+.feature-sec .sec-title {
+    margin-bottom: 160px;
 }
 
 .feature-item {
@@ -1330,24 +1340,49 @@ header {
     border: 1px solid #ed4c21;
 }
 
-.uk-tab::before {}
+.uk-tab::before {
+    display: none;
+}
 
 .uk-tab>*>a {
-    color: #333;
     font-size: 16px;
     text-transform: capitalize;
-    font-weight: 700;
-    border-width: 2px;
+    border: 1px solid transparent !important;
+    background-color: #ECECEC;
 }
 
 .uk-tab>.uk-active>a {
+    background-color: #ed4c21;
+    color: #fff !important;
     border-color: #ed4c21;
+}
+
+.home-slider {}
+
+.home-slider .uk-slideshow-nav {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1;
 }
 
 .price-table {}
 
 .price-table table {
     min-width: 650px;
+}
+
+.price-table table tr th {
+    padding: 25px 25px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: #ECECEC;
+}
+
+.price-table table tr td {
+    padding: 25px 15px;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .price-tab table tr b,
@@ -1357,12 +1392,88 @@ header {
 
 .faq-accordion {}
 
-.faq-accordion li {}
+.faq-accordion li {
+    box-shadow: 0 5px 10px #80808024;
+}
 
-.faq-accordion li .uk-accordion-title {}
+.faq-accordion li.uk-open .uk-accordion-title {
+    background-color: #ED4C21;
+    color: #fff;
+}
 
-.faq-accordion li .uk-accordion-content {}
+.faq-accordion li.uk-open .uk-accordion-title::before {
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMyAxMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTMgMTM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxyZWN0IHk9IjYiIGNsYXNzPSJzdDAiIHdpZHRoPSIxMyIgaGVpZ2h0PSIxIi8+DQo8L3N2Zz4NCg==');
+}
 
-.faq-accordion li .uk-accordion-content p {}
+.faq-accordion li .uk-accordion-title {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #fafafa;
+    padding: 15px 25px;
+    line-height: 30px
+}
+
+.faq-accordion li .uk-accordion-content {
+    padding: 20px 25px;
+}
+
+.faq-accordion li .uk-accordion-content p {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+}
 
 .faq-accordion li .uk-accordion-content p a {}
+
+.download-icon {
+    max-width: 65px;
+    margin: auto;
+}
+
+.collection-hub p {
+    margin: 0;
+}
+
+.card-hub {
+    padding: 15px;
+    background-color: #ececec91;
+    font-size: 14px;
+    line-height: 27px;
+    color: #333;
+}
+
+.card-hub p {
+    font-size: 14px;
+    line-height: 27px;
+    color: #333;
+}
+
+.card-hub a {
+    color: #ED4C21;
+}
+
+
+.card-hub h4 {}
+
+.card-hub ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.card-hub ul li {}
+
+.card-hub ul li a {
+    color: #333;
+}
+
+.card-hub ul li a:hover {
+    color: #ED4C21;
+}
+
+.service-area {}
+
+.service-area p {
+    margin: 0;
+}

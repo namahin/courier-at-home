@@ -165,6 +165,40 @@
       text-transform: capitalize;
       font-weight: 500;
       font-size: 13px;
+      position: relative;
+    }
+
+    .step-int li::before {
+      content: '';
+      position: absolute;
+      top: 13px;
+      right: -2px;
+      left: 50%;
+      height: 2px;
+      background-color: #fff;
+    }
+
+    .step-int li::after {
+      content: '';
+      position: absolute;
+      top: 13px;
+      left: -2px;
+      right: 50%;
+      height: 2px;
+      background-color: #fff;
+    }
+
+    .step-int li:first-child::after {
+      display: none;
+    }
+
+    .step-int li:last-child::before {
+      display: none;
+    }
+
+    .step-int li.step.finish::before,
+    .step-int li.step.finish::after {
+      background-color: #ED4C21;
     }
 
     .step-int li small {
@@ -182,6 +216,8 @@
       color: #000000d9;
       background: #fff;
       margin-bottom: 5px;
+      position: relative;
+      z-index: 1;
     }
 
     .step.active span {
@@ -295,7 +331,7 @@
 
   <div class="container">
     <div class="registation-form">
-      <form id="regForm" action="registration-success.html">
+      <form name="regForm" id="regForm" action="registration-success.html">
         <div class="c-logo">
           <img src="assets/img/logo.png" alt="">
         </div>
@@ -322,7 +358,8 @@
           <div class="row">
             <div class="col-md-12 col-sm-12">
               <label for="name">Merchant Name<sup>*</sup></label>
-              <p><input type="text" placeholder="Name" oninput="this.className = ''" name="name"></p>
+              <p><input type="text" placeholder="Name" oninput="this.className = ''" name="name"
+                  required><span>required</span></input></p>
             </div>
             <div class="col-md-6 col-sm-6">
               <label for="">Mobile Number<sup>*</sup></label>
@@ -573,6 +610,15 @@
         $('#' + $(this).val()).show();
       });
     });
+  </script>
+  <script>
+    // function validateForm() {
+    //   var x = document.forms["regForm"]["name", "mobile", "email", "password", "rpassword"].value;
+    //   if (x == "") {
+    //     alert("(*) must be filled out");
+    //     return false;
+    //   }
+    // }
   </script>
 
 </body>

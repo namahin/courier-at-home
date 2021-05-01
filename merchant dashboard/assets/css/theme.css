@@ -17,3 +17,23 @@
 .card-profile .card-avatar {
     box-shadow: 0 4px 20px 0 #00000024, 0 7px 10px -5px #52525266;
 }
+
+.pay-card {
+    padding: 15px 10px;
+}
+
+.pay-card ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pay-card ul li {
+    font-size: 15px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.pay-card ul li span {
+    font-weight: 500;
+}
