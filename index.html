@@ -146,8 +146,8 @@
         <!-- navigation header end here -->
 
         <div class="home-banner">
-            
-            <div class="uk-position-relative uk-visible-toggle uk-light home-slider" tabindex="-1" uk-slideshow="min-height: 650; max-height: 650; autoplay: true">
+
+            <!-- <div class="uk-position-relative uk-visible-toggle uk-light home-slider" tabindex="-1" uk-slideshow="min-height: 650; max-height: 650; autoplay: true">
                 <ul class="uk-slideshow-items">
                     <li>
                         <img src="assets/media/images/truck.jpg" alt="" uk-cover>
@@ -160,7 +160,38 @@
                     </li>
                 </ul>
                 <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div> -->
+
+            <!-- banner -->
+            <div id="homeBanner" class="carousel slide home-banner" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#homeBanner" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#homeBanner" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#homeBanner" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/media/images/banner/2 web.jpg" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/media/images/banner/3 web.jpg" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/media/images/banner/web 4.jpg" alt="">
+                    </div>
+                </div>
             </div>
+            <!-- banner end -->
+
+
+
+
+
+
+
 
 
             <div class="banner-content">
@@ -172,7 +203,7 @@
                             Parcel!|
                             Order!|
                         </span></span></h1>
-                <p>Delevery @ Home! Now you can track your <strong>parcel</strong> easily.</p>
+                <!-- <p>Delevery @ Home! Now you can track your <strong>parcel</strong> easily.</p> -->
                 <div class="tracker">
                     <form action="tracking-result.html#tracking-result">
                         <p><i class="fas fa-thumbtack"></i><input type="text"
