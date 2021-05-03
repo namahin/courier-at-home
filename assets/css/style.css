@@ -169,8 +169,6 @@ button:focus {
     font-size: 25px;
 }
 
-.home-banner-sec {}
-
 
 header {
     background: #fff;
@@ -210,8 +208,6 @@ header {
 .home-banner .carousel-inner {
     padding-top: 67px;
 }
-
-.home-banner .carousel-item {}
 
 .carousel-indicators {
     bottom: 20px;
@@ -1158,12 +1154,38 @@ header {
     margin-bottom: 20px;
     text-align: center;
     padding: 25px;
-    height: 250px;
+    height: 270px;
     position: relative;
     z-index: 1;
     border-radius: 0;
     overflow: hidden;
     background: #ffff;
+    transition: linear .3s;
+}
+
+
+.single-service-item p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+}
+
+.single-service-item .button a span {
+    font-size: 14px;
+    padding-left: 10px;
+    transition: linear .2s;
+}
+
+.single-service-item:hover a {
+    color: #ed4c21;
+}
+
+.single-service-item:hover a span {
+    padding-left: 5px;
+    transition: linear .2s;
 }
 
 .service-icon i:before {
@@ -1228,7 +1250,6 @@ header {
     padding-top: 80px;
 }
 
-.contact-info {}
 
 .info-card {
     display: table;
@@ -1266,8 +1287,6 @@ header {
     margin: 0;
     line-height: 19px;
 }
-
-.contact-area {}
 
 .contact-area h3 {
     font-size: 22px;
@@ -1375,7 +1394,6 @@ header {
     border-color: #ed4c21;
 }
 
-.home-slider {}
 
 .home-slider .uk-slideshow-nav {
     position: absolute;
@@ -1384,7 +1402,6 @@ header {
     z-index: 1;
 }
 
-.price-table {}
 
 .price-table table {
     min-width: 650px;
@@ -1408,7 +1425,6 @@ header {
     font-weight: 600;
 }
 
-.faq-accordion {}
 
 .faq-accordion li {
     box-shadow: 0 5px 10px #80808024;
@@ -1442,7 +1458,6 @@ header {
     line-height: 30px;
 }
 
-.faq-accordion li .uk-accordion-content p a {}
 
 .download-icon {
     max-width: 65px;
@@ -1472,7 +1487,6 @@ header {
 }
 
 
-.card-hub h4 {}
 
 .card-hub ul {
     padding: 0;
@@ -1480,7 +1494,6 @@ header {
     list-style: none;
 }
 
-.card-hub ul li {}
 
 .card-hub ul li a {
     color: #333;
@@ -1490,7 +1503,6 @@ header {
     color: #ED4C21;
 }
 
-.service-area {}
 
 .service-area p {
     margin: 0;

@@ -322,6 +322,8 @@
       transition: linear .3s;
     }
   </style>
+</head>
+
 
 <body>
 
@@ -358,8 +360,7 @@
           <div class="row">
             <div class="col-md-12 col-sm-12">
               <label for="name">Merchant Name<sup>*</sup></label>
-              <p><input type="text" placeholder="Name" oninput="this.className = ''" name="name"
-                  required><span>required</span></input></p>
+              <p><input type="text" placeholder="Name" oninput="this.className = ''" name="name" required autocomplete="01"></p>
             </div>
             <div class="col-md-6 col-sm-6">
               <label for="">Mobile Number<sup>*</sup></label>
@@ -487,11 +488,12 @@
               </div>
               <div class="col-md-6 col-sm-6">
                 <label for="">Bkash Mobile Number<sup>*</sup></label>
-                <p><input type="text" placeholder="Bkash Number" oninput="this.className = ''"></p>
+                <p><input class="acnumber" id="bkashNo" type="text" placeholder="Bkash Number" oninput="this.className = ''"></p>
               </div>
               <div class="col-md-6 col-sm-6">
                 <label for="">Confirm Bkash Mobile Number<sup>*</sup></label>
-                <p><input type="text" placeholder="Re-type Bkash Number" oninput="this.className = ''"></p>
+                <p><input class="confirmAcnumber" id="cBkashNo" type="text" placeholder="Re-type Bkash Number"
+                    oninput="this.className = ''"></p>
               </div>
             </div>
           </div>
@@ -543,7 +545,7 @@
         document.getElementById("prevBtn").style.display = "inline";
       }
       if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "<span>Submit</span>";
+        document.getElementById("nextBtn").innerHTML = "<span class='buttonSubmit'>Submit</span>";
       } else {
         document.getElementById("nextBtn").innerHTML = "<span>Next</span>";
       }
@@ -619,6 +621,50 @@
     //     return false;
     //   }
     // }
+  </script>
+
+  <script>
+    // document.querySelector('.buttonSubmit').onclick = function(){
+
+    //   let acnumber = document.querySelector('.acnumber').value,
+    //       confirmAcnumber = document.querySelector('.confirmAcnumber').value;
+
+    //       if(acnumber != confirmAcnumber){
+    //         alert("Cheque account number again")
+    //       }
+    //       return true
+    // }
+  </script>
+
+  <script>
+    const bkashNo = document.getElementById("bkashNo")
+    const cBkashNo = document.getElementById("cBkashNo")
+
+    let BkashNmbr;
+    let cBkashNmbr;
+
+
+    bkashNo.addEventListener("input", (e) => {
+      BkashNmbr = e.target.value;
+    })
+
+
+    cBkashNo.addEventListener("input", e => {
+      cBkashNmbr = e.target.value;
+    })
+
+
+    cBkashNo.addEventListener("blur", () => {
+      if (BkashNmbr == "") {
+        alert("Please enter account number")
+      } else if(cBkashNmbr == ""){
+        alert("Please confirm account number")
+      } else if(BkashNmbr != cBkashNmbr) {
+        alert("Account number doesn't Matched")
+        return false
+      } else if(BkashNmbr === cBkashNmbr){}
+        return true
+    })
   </script>
 
 </body>
