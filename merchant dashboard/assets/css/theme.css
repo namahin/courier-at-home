@@ -37,3 +37,45 @@
 .pay-card ul li span {
     font-weight: 500;
 }
+
+.sidebar[data-color=theme] li.active>a {
+    background-color: #ed4c21;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(255, 152, 0, .4)
+}
+
+.card .card-header-theme .card-icon,
+.card .card-header-theme .card-text,
+.card .card-header-theme:not(.card-header-icon):not(.card-header-text) {
+    background: linear-gradient(60deg, #ed4c21, #ed3921)
+}
+
+.fixed-plugin .badge-theme {
+    background-color: #ed4c21
+}
+
+.logo-normal {
+    max-width: 150px;
+    margin: auto;
+    display: block;
+}
+
+.logo-normal img {
+    width: 100%;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.serif-font,
+.popover,
+.tooltip {
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+}

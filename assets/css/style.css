@@ -240,7 +240,7 @@ header {
     right: 0;
     top: 0;
     z-index: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #00000066;
 }
 
 .home-banner .banner-content {
@@ -748,8 +748,7 @@ header {
 
 .tracking-page .home-banner {
     background-image: none;
-    padding-top: 250px;
-    padding-bottom: 180px;
+    padding: 100px 0;
 }
 
 .tracking-page .home-banner::after {
@@ -1141,7 +1140,6 @@ header {
 }
 
 
-
 /* services */
 
 
@@ -1151,10 +1149,11 @@ header {
 
 .single-service-item {
     box-shadow: 0 3px 9px -2px #d0cece;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
     padding: 25px;
-    height: 270px;
+    padding-bottom: 50px;
+    height: calc(100% - 25px);
     position: relative;
     z-index: 1;
     border-radius: 0;
@@ -1165,14 +1164,19 @@ header {
 
 
 .single-service-item p {
-    display: -webkit-box;
+    /* display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 2; */
 }
-
+.single-service-item .button{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
 .single-service-item .button a span {
     font-size: 14px;
     padding-left: 10px;
