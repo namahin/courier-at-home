@@ -24,7 +24,11 @@
             <div class="logo"><a href="index.html" class="logo-normal"><img src="assets/img/logo.png" alt=""></a></div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="nav-item active"><a class="nav-link" href="index.html?Add-New-Parcel"><i
+                    <li class="nav-item active"><a class="nav-link" href="index.html"><i
+                                class="material-icons">dashboard</i>
+                            <p>Dashboard</p>
+                        </a></li>
+                    <li class="nav-item"><a class="nav-link" href="add-parcel.html"><i
                                 class="material-icons">add_task</i>
                             <p>New Parcel</p>
                         </a></li>
@@ -68,7 +72,7 @@
             <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
-                        <a class="navbar-brand" href="javascript:;">Add New Parcel</a>
+                        <a class="navbar-brand" href="javascript:;">Merchant Dashboard</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -126,270 +130,198 @@
             <!-- End Navbar -->
             <div class="content">
                 <div class="container-fluid">
-                    <form action="">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="card">
-                                    <div class="card-header card-header-theme">
-                                        <h4 class="card-title mb-0">Package and collection information</h4>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header card-header-warning card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="material-icons">rotate_left</i>
                                     </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="bmd-label-floating text-dark">Own reference number /
-                                                        invoice<sup>*</sup></label>
-
-                                                    <input type="text" name="invoice" class="form-control" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="bmd-label-floating text-dark">Actual package
-                                                        price<sup>*</sup></label>
-                                                    <input id="" type="text" name="collection_amount" class="form-control"
-                                                        required>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <select name="collection_district_id" id="collectionDistrict"
-                                                        class="form-control" required>
-                                                        <option value=" ">Collection district</option>
-                                                        <option value="30">Dhaka</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <select name="collection_zone_id" id="collectionZone"
-                                                        class="form-control" required>
-                                                        <option value=" ">Collection location</option>
-                                                        <option value="1">Kafrul</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <div class="form-group">
-                                                        <label class="bmd-label-floating text-dark">Additional note
-                                                            (optional)</label>
-                                                        <textarea name="description" class="form-control pb-3"
-                                                            rows="4"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
+                                    <p class="card-category">On Pending</p>
+                                    <h3 class="card-title">5</h3>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card">
-                                    <div class="card-header card-header-theme">
-                                        <h4 class="card-title mb-0">Customer Information</h4>
-
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons text-danger">add_task</i>
+                                        <a href="add-parcel.html">Add new parcel</a>
                                     </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="bmd-label-floating text-dark">Customer
-                                                        Name<sup>*</sup></label>
-                                                    <input type="text" name="name" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="bmd-label-floating text-dark">Mobile
-                                                        Number<sup>*</sup></label>
-                                                    <input type="text" name="mobile" class="form-control" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="bmd-label-floating text-dark">Another Mobile
-                                                        Number</label>
-                                                    <input type="text" name="another_mobile" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <select name="district_id" id="district" class="form-control"
-                                                        required>
-                                                        <option value="0" selected>Select district</option>
-                                                        <option value="60">Dhaka</option>
-                                                        <option value="100">Chandpur</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <select name="thana_id" id="thanaId" class="form-control" required>
-                                                        <option value=" ">Select Thana / Area</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="form-group">
-                                                    <div class="form-group">
-                                                        <label class="bmd-label-floating text-dark">Detailed Address
-                                                            (House / Road / Village)</label>
-                                                        <textarea name="address" class="form-control pb-3"
-                                                            rows="2"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <select name="parcel_type_id" id="parcelType" class="form-control"
-                                                        required>
-                                                        <option value=" ">Select Parcel Type</option>
-                                                        <option value="documents">Documents</option>
-                                                        <option value="parcel">Parcel</option>
-                                                        <option value="mobile">Mobile</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <select id="weightId" class="form-control">
-                                                        <option value="">Weight (kg)</option>
-                                                        <option value="01">0 - 1 kg</option>
-                                                        <option value="01">1 - 2 kg</option>
-                                                    </select>
-                                                    <input type="hidden" name="shipment_id" id="shipmentId" value="">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <select id="weightId" class="form-control">
-                                                        <option value="">Unit</option>
-                                                        <option value="1">1pcs</option>
-                                                        <option value="2">2pcs</option>
-                                                    </select>
-                                                    <input type="hidden" name="shipment_id" id="shipmentId" value="">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <hr>
-                                                <label class="bmd-label-floating text-dark">Choose Our Service</label>
-                                                <div class="custom-control custom-radio">
-                                                    <input type="radio" class="custom-control-input" id="Service"
-                                                        name="Service" value="regular">
-                                                    <label class="custom-control-label text-dark" for="Service">Delivery
-                                                        Only</label>
-                                                </div>
-                                                <div class="custom-control custom-radio">
-                                                    <input type="radio" class="custom-control-input" id="Service1"
-                                                        name="Service" value="same-day">
-                                                    <label class="custom-control-label  text-dark"
-                                                        for="Service1">Delivery + Taka Collection</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-12">
-                                                <hr>
-
-                                                <div class="form-group">
-                                                    <label class="bmd-label-floating text-dark">Collection
-                                                        Amount<sup>*</sup></label>
-                                                    <input id="collection" type="text" name="invoice" class="form-control" required>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <label class="bmd-label-floating text-dark">Choose Delivery
-                                                    Option</label>
-                                                <div class="custom-control custom-radio">
-                                                    <input type="radio" class="custom-control-input"
-                                                        id="defaultUnchecked" name="charge" value="0">
-                                                    <label class="custom-control-label text-dark"
-                                                        for="defaultUnchecked">Regular Delivery</label>
-                                                </div>
-                                                <div class="custom-control custom-radio">
-                                                    <input type="radio" class="custom-control-input" id="defaultChecked"
-                                                        name="charge" value="40">
-                                                    <label class="custom-control-label  text-dark"
-                                                        for="defaultChecked">Express Delivery</label>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <button type="submit" class="btn btn-primary pull-right">Create Place</button>
-                                    </div>
-                                    <div class="clearfix"></div>
                                 </div>
                             </div>
                         </div>
-
-
-
-                            <!-- display value -->
-    <div class="dis-value">
-        <h4>Total Service Charge</h4>
-        <table>
-            <tr>
-                <td>Delivery Charge</td>
-                <td id="displayCharge"></td>
-            </tr>
-            <tr>
-                <td>COD Charge (1%)</td>
-                <td id="displayCod"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td id="displayTotal">0</td>
-            </tr>
-        </table>
-    </div>
-    <!-- display value end -->
-
-
-
-                    </form>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header card-header-info card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="material-icons">local_shipping</i>
+                                    </div>
+                                    <p class="card-category">On Shipping</p>
+                                    <h3 class="card-title">25</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">update</i> Just Updated
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header card-header-success card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="material-icons">store</i>
+                                    </div>
+                                    <p class="card-category">Delivered Parcel</p>
+                                    <h3 class="card-title">205</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">date_range</i> Last 24 Hours
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header card-header-danger card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="material-icons">published_with_changes</i>
+                                    </div>
+                                    <p class="card-category">Returned Parcel</p>
+                                    <h3 class="card-title">75</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">local_offer</i> Free Return Parcel
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-4">Today's Total Order: 2</div>
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4"></div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead class="text-center text-primary">
+                                                <th>#</th>
+                                                <th>Order ID</th>
+                                                <th>Date</th>
+                                                <th>Customer info</th>
+                                                <th>Package info</th>
+                                                <th>Collection amount</th>
+                                                <th>Total service charge</th>
+                                                <th>Order status</th>
+                                                <th>Actions</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>0000001</td>
+                                                    <td>21-2-2021</td>
+                                                    <td>Noore Alam Mahin<br>355 Ibrahimpur, Dhaka Cantt<br>01478523691
+                                                    </td>
+                                                    <td>012487</td>
+                                                    <td>৳ 1500</td>
+                                                    <td>৳ 50</td>
+                                                    <td>Merchant accepted payment</td>
+                                                    <td>
+                                                        <button type="submit"
+                                                            class="btn btn-primary btn-round btn-just-icon">
+                                                            <i class="material-icons">edit</i>
+                                                            <div class="ripple-container"></div>
+                                                        </button>
+                                                        <button type="submit"
+                                                            class="btn btn-danger btn-round btn-just-icon">
+                                                            <i class="material-icons">delete_forever</i>
+                                                            <div class="ripple-container"></div>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>0000001</td>
+                                                    <td>21-2-2021</td>
+                                                    <td>Noore Alam Mahin<br>355 Ibrahimpur, Dhaka Cantt<br>01478523691
+                                                    </td>
+                                                    <td>012487</td>
+                                                    <td>৳ 1500</td>
+                                                    <td>৳ 50</td>
+                                                    <td>Merchant accepted payment</td>
+                                                    <td>
+                                                        <button type="submit"
+                                                            class="btn btn-primary btn-round btn-just-icon">
+                                                            <i class="material-icons">edit</i>
+                                                            <div class="ripple-container"></div>
+                                                        </button>
+                                                        <button type="submit"
+                                                            class="btn btn-danger btn-round btn-just-icon">
+                                                            <i class="material-icons">delete_forever</i>
+                                                            <div class="ripple-container"></div>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot class="border-top border-primary">
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Grand Total</td>
+                                                <td></td>
+                                                <td>৳ 3000</td>
+                                                <td>৳ 100</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                    <nav aria-label="...">
+                                        <ul class="pagination">
+                                            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"
+                                                    aria-disabled="true"><span
+                                                        class="material-icons">chevron_left</span></a></li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item active" aria-current="page">
+                                                <a class="page-link" href="#">2</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"><span
+                                                        class="material-icons">chevron_right</span></a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-
             </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav class="float-left">
+                        <ul>
+                            <li><a href="#" target="_blank">Site</a></li> <!-- main website url -->
+                            <li><a href="#">About Us</a></li> <!-- main website about us url -->
+                            <li><a href="#">Blog</a></li> <!-- main website blog url -->
+                        </ul>
+                    </nav>
+                    <div class="copyright float-right">
+                        &copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>, <a href="#" target="_blank">Courier @ Home</a>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="float-left">
-                    <ul>
-                        <li><a href="#" target="_blank">Site</a></li> <!-- main website url -->
-                        <li><a href="#">About Us</a></li> <!-- main website about us url -->
-                        <li><a href="#">Blog</a></li> <!-- main website blog url -->
-                    </ul>
-                </nav>
-                <div class="copyright float-right">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>, <a href="#" target="_blank">Courier @ Home</a>
-                </div>
-            </div>
-        </footer>
+
     </div>
     </div>
 
@@ -398,71 +330,6 @@
 
 
 
-
-
-
-
-
-<script>
-
-</script>
-
-
-
-
-
-<!--
-
-<script>
-    const priceInput = document.getElementById("price")
-    var display = document.getElementById("display")
-
-    const locationInput = document.getElementById("location")
-
-    let vat = null;
-    let price;
-    let LocatioN;
-
-    priceInput.addEventListener("input", (e) => {
-    price = Number(e.target.value);
-    if (price) {
-    if (LocatioN) {
-    let actualPrice = (((price / 100) * vat) + price) + LocatioN
-    display.innerHTML = actualPrice
-    } else {
-    display.innerHTML = null
-    }
-    } else {
-    display.innerHTML = null
-    }
-
-    if (LocatioN) {
-    if (price) {
-    let actualPrice = (((price / 100) * vat) + price) + LocatioN
-    display.innerHTML = actualPrice
-    } else {
-    display.innerHTML = null
-    }
-    } else {
-    display.innerHTML = null
-    }
-
-    })
-
-    locationInput.addEventListener("input", (e) => {
-    if (price > 0) {
-    LocatioN = Number(e.target.value)
-    let actualPrice = (((price / 100) * vat) + price) + LocatioN
-    display.innerHTML = actualPrice
-    } else {
-    display.innerHTML = ''
-    }
-
-    })
-</script>
-
-
--->
 
 
 
